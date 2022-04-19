@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "srproj";
+    src: url("C:/Users/Analisa/Downloads/Srprojfont-Regular.ttf");
+ }
+
+* {
+    background-color: #FFF9E6;
+    text-align: center;
+}
+  
+h1 {
+    text-align: center;
+    font-family: "srproj";
+    font-size: 5em;
+    color: #292B2E;
+}
+
+.grid-container {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 25% 25% 25%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    border-radius: 1em;
+}
+
+.grid-item {
+    margin: 0.8em;
+}
+
+.item7 {
+    justify-content: center;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    margin-top: 2rem;
+}
+
+button {
+    font-family: "srproj";
+    font-size: 2.1em;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #292B2E;
+    cursor: pointer;
+    border: none;
+    padding: 0.4em;
+    text-align: center;
+    width: 5em;
+    border-radius: 0.5em;
+}
