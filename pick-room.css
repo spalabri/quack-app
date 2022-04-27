@@ -41,14 +41,13 @@ img {
 
 button {
     font-family: "srproj";
-    font-size: 2.1em;
+    font-size: 2.1rem;
     font-weight: bold;
     color: #FFFFFF;
     background-color: #292B2E;
     cursor: pointer;
     border: none;
-    padding: 0.4em;
+    padding: 0.7rem 2.7rem 0.7rem 2.7rem;
     text-align: center;
-    width: 5em;
-    border-radius: 0.5em;
+    border-radius: 1rem;
 }
