@@ -1,6 +1,6 @@
 @font-face {
     font-family: "srproj";
-    src: url("C:/Users/Analisa/Downloads/Srprojfont-Regular.ttf");
+    src: url("Srprojfont-Regular.ttf");
  }
 
 * {
@@ -11,11 +11,11 @@
 h1 {
     text-align: center;
     font-family: "srproj";
-    font-size: 5em;
+    font-size: 5rem;
     color: #292B2E;
 }
 
-.grid-container {
+.room-grid {
     display: grid;
     margin: auto;
     grid-template-columns: 25% 25% 25%;
@@ -32,7 +32,7 @@ img {
     margin: 0.8em;
 }
 
-.item7 {
+.play-button {
     justify-content: center;
     grid-column: 1 / span 3;
     grid-row: 3;
