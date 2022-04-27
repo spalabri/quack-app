@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "srproj";
+    src: url("Srprojfont-Regular.ttf");
+ }
+
+* {
+    background-color: #FFF9E6;
+    text-align: center;
+}
+  
+h1 {
+    text-align: center;
+    font-family: "srproj";
+    font-size: 5rem;
+    color: #292B2E;
+}
+
+.room-grid {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 25% 25% 25%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.grid-item {
+    margin: 0.8rem;
+}
+
+.play-button {
+    justify-content: center;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    margin-top: 2rem;
+}
+
+button {
+    font-family: "srproj";
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #292B2E;
+    cursor: pointer;
+    border: none;
+    padding: 0.7rem 2.7rem 0.7rem 2.7rem;
+    text-align: center;
+    border-radius: 1rem;
+}

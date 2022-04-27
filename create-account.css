@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "srproj";
+    src: url("Srprojfont-Regular.ttf");
+ }
+
+* {
+    background-color: #FFF9E6;
+}
+  
+h1 {
+    text-align: center;
+    font-family: "srproj";
+    font-size: 5rem;
+    color: #292B2E;
+}
+
+.account-grid {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+}
+
+.grid-item {
+    margin: 2rem 3.5rem 2rem 3.5rem;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #292B2E;
+    letter-spacing: 0.25rem;
+}
+
+.email-field {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+.confirm-button {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    text-align: center;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 0.65rem;
+    margin-top: 0.7rem;
+    background-color: #FBE7D5;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+button {
+    font-family: "srproj";
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #292B2E;
+    cursor: pointer;
+    border: none;
+    padding: 0.7rem 2.7rem 0.7rem 2.7rem;
+    text-align: center;
+    border-radius: 1rem;
+}

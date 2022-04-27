@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "srproj";
+    src: url("Srprojfont-Regular.ttf");
+ }
+
+* {
+    background-color: #FFF9E6;
+    text-align: center;
+}
+  
+h1 {
+    text-align: center;
+    font-family: "srproj";
+    font-size: 5rem;
+    color: #292B2E;
+}
+
+img {
+    width: 20%;
+}
+
+input[type=text] {
+    width: 23rem;
+    padding: 0.65rem;
+    margin-top: 0.7rem;
+    background-color: #FBE7D5;
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 5rem;
+}
+
+button {
+    font-family: "srproj";
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #292B2E;
+    cursor: pointer;
+    border: none;
+    padding: 0.7rem 2.7rem 0.7rem 2.7rem;
+    text-align: center;
+    border-radius: 1rem;
+}
