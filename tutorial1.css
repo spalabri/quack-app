@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "srproj";
+    src: url("Srprojfont-Regular.ttf");
+ }
+
+.tutorial1-box {
+    margin: 15vh auto;
+    background-color: #FFF9E6;
+    text-align: center;
+    width: 40%;
+    padding: 2rem 2rem 3.5rem 2rem;
+    border-radius: 1rem;
+}
+  
+h1 {
+    text-align: center;
+    font-family: "srproj";
+    font-size: 4rem;
+    color: #292B2E;
+}
+
+p {
+    font-family: 'SF Pro Display', sans-serif;
+    color: #000000;
+    letter-spacing: 0.1rem;
+    line-height: 0.25rem;
+    font-size: 1.25rem;
+}
+
+button {
+    font-family: "srproj";
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #292B2E;
+    cursor: pointer;
+    border: none;
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-transform: uppercase;
+    font-family: 'SF Pro Display', sans-serif;
+    color: #545454;
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
