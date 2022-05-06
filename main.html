@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <img src="images/white-bg.jpg" class="bg">
+        <div class="header">
+            <a class="user-name">Fiona's Friend</a>
+            <a href="#default" class="pet-name">mochiko</a>
+        </div>
+        <div id="sleepModal" class="modal">
+            <div class="modal-content">
+                <img src="images/sleep.png" class="modal-img">
+                <p class="modal-heading">It's important to take care of yourself too.</p>
+                <p class="modal-text">When you're back, Mochiko willl have more energy!</p>
+                <button type="button" class="close" onclick="wake()">Wake up</button>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="disclaimer">Your browser window is too small. Please resize.</p>
+            <button type="button">home</button>
+            <button type="button">shop</button>
+            <button type="button">code</button>
+            <button type="button" id="sleepButton" onclick="sleep()">sleep</button>
+            <button type="button">connect</button>
+            <button type="button" onclick="foodCursor()">feed</button>
+        </div>
+        <canvas id="canvas1" onclick="defaultCursor()"></canvas>
+        <script src="main.js"></script>
+    </body>
+</html>
