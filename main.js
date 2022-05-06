@@ -1,10 +1,7 @@
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
-
-/* Must be the same dimensions as the one given to the CSS */
-const CANVAS_WIDTH = canvas.width = 600;
-const CANVAS_HEIGHT= canvas.height = 600;
-
+const CANVAS_WIDTH = canvas.width = 600; // Must be the same dimensions as the one given to the CSS
+const CANVAS_HEIGHT= canvas.height = 600; // Must be the same dimensions as the one given to the CSS
 const petImage = new Image();
 petImage.src = 'images/cute_dog.png';
 const spriteWidth = 547;
@@ -28,28 +25,33 @@ function animate() {
     }
     gameFrame++;
     id = requestAnimationFrame(animate);
-};
+}
 
 animate();
 
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+function sleep() {
+  var sleepModal = document.getElementById("sleepModal");
+  var sleepButton = document.getElementById("sleepButton");
+  sleepModal.style.display = "block";
   cancelAnimationFrame(id);
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+function wake() {
+  var span = document.getElementsByClassName("close")[0];
+  sleepModal.style.display = "none";
   id = requestAnimationFrame(animate);
 }
 
+function foodCursor() {
+  var body = document.body;
+  body.id = ( body.id ) ? body.id : 'body_id'; // ffox
+
+  body.use_custom_cursor = !body.use_custom_cursor;
+
+  body.style.cursor = 'url(https://cur.cursors-4u.net/food/foo-6/foo523.cur), auto';
+}
+
+function defaultCursor() {
+  var body = document.body;
+  body.style.cursor = "default";
+}
