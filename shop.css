@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "srproj";
+    src: url("Srprojfont-Regular.ttf");
+ }
+
+.shop-box {
+    background-color: #FFF9E6;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 1rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: 8rem;
+ }
+
+h1 {
+    font-family: "srproj";
+    color: #292B2E;
+    font-size: 4rem;
+    margin: 1rem 0rem 1rem 1.5rem;
+}
+
+.tab-div {
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+    display: grid;
+}
+  
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: #FBE7D5;
+    font-family: "srproj";
+    color: #292B2E;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    float: left;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 1.3rem 0.6rem 1.3rem;
+    transition: 0.3s;
+    margin-right: 1rem;
+}
+  
+/* Create an active/current tablink class */
+.tab button.active {
+    color: #FFFFFF;
+    background-color: #292B2E;
+}
+
+/* Style the tab content */
+.tab-content {
+    display: none;
+    background-color: #FBE7D5;
+    border-radius: 0rem 0.5rem 0.5rem 0.5rem;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: center;
+}
+
+.food-item {
+    display: grid;
+    grid-template-columns: 80% 15% 5%;
+    grid-template-rows: 8rem 2rem;
+    overflow: hidden;
+    background-color: #FFF9F4;
+    margin: 0.75rem;
+    border-radius: 1rem;
+    color: #292B2E;
+    padding: 0rem 2rem 1rem 1rem;
+} 
+
+.food-image {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+
+h3 {
+    font-family: "srproj";
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-family: 'SF Pro Display';
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}

@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "srproj";
+    src: url("Srprojfont-Regular.ttf");
+ }
+
+.tutorial2-grid {
+    display: grid;
+    margin: 15vh auto;
+    grid-template-columns: 33% 33% 33%;
+    background-color: #FFF9E6;
+    text-align: center;
+    width: 40%;
+    padding: 3rem 4rem 3rem 5rem;
+    border-radius: 1rem;
+}
+
+.tutorial2-body {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    text-align: left;
+    word-wrap: break-word;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 7% 93%;
+    overflow: hidden;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.grid-captions {
+    grid-column: 1 / span 3;
+    text-align: left;
+}
+
+.grid-captions.first-caption {
+    grid-row: 1;
+}
+
+.grid-captions.last-caption {
+    margin-bottom: 1rem;
+}
+
+.body-image {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+
+.body-text {
+    padding-left: 1rem;
+}
+
+img {
+    width: 100%;
+}
+  
+h3 {
+    font-family: 'SF Pro Display', sans-serif;
+    color: #000000;
+    letter-spacing: 0.1rem;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+p {
+    font-family: 'SF Pro Display', sans-serif;
+    color: #000000;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+}
+
+button {
+    font-family: "srproj";
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #292B2E;
+    cursor: pointer;
+    border: none;
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+a {
+    text-transform: uppercase;
+    font-family: 'SF Pro Display', sans-serif;
+    color: #545454;
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-button {
+    text-align: left;
+}
+
+.next-button {
+    text-align: right;
+}
