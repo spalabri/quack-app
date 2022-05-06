@@ -27,8 +27,6 @@ function animate() {
     id = requestAnimationFrame(animate);
 }
 
-animate();
-
 function sleep() {
   var sleepModal = document.getElementById("sleepModal");
   var sleepButton = document.getElementById("sleepButton");
@@ -40,6 +38,19 @@ function wake() {
   var span = document.getElementsByClassName("close")[0];
   sleepModal.style.display = "none";
   id = requestAnimationFrame(animate);
+}
+
+function shop() {
+  canvas.style.transform = "translate(-120%, -50%)";
+  var shopModal = document.getElementById("shopModal");
+  var shopButton = document.getElementById("shopButton");
+  shopModal.style.display = "block";
+}
+
+function exitShop() {
+  canvas.style.transform = "translate(-50%, -50%)";
+  var span = document.getElementsByClassName("nav-close")[0];
+  shopModal.style.display = "none";
 }
 
 function foodCursor() {
@@ -55,3 +66,5 @@ function defaultCursor() {
   var body = document.body;
   body.style.cursor = "default";
 }
+
+animate();
