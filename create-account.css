@@ -41,7 +41,27 @@ h1 {
     text-align: center;
 }
 
+.err { 
+    background: #ffe6ee; 
+    border: 1px solid #b1395f; 
+}
+.emsg { 
+    color: #c12020; 
+    font-size: 0.7rem;
+    font-family: 'SF Pro Display', sans-serif;
+    margin-top: 0.7rem;
+}
+
 input[type=text] {
+    width: 100%;
+    padding: 0.65rem;
+    margin-top: 0.7rem;
+    background-color: #FBE7D5;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+input[type=password] {
     width: 100%;
     padding: 0.65rem;
     margin-top: 0.7rem;
