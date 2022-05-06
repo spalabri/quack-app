@@ -15,29 +15,34 @@
             <div class="account-grid">
                 <div class="grid-item">
                     <label for="fname">first name</label><br>
-                    <input type="text" id="fname" name="fname"><br>
+                    <input oninput="checkName(this)" type="text" onKeyup="checkform()" id="fname" name="fname"><br>
+                    <div id="fnameError" class="emsg"></div> 
                 </div>
                 <div class="grid-item">
                     <label for="lname">last name</label><br>
-                    <input type="text" id="lname" name="lname">
+                    <input oninput="checkName(this)" type="text" onKeyup="checkform()" id="lname" name="lname">
+                    <div id="lnameError" class="emsg"></div> 
                 </div>
                 <div class="grid-item email-field">
                     <label for="email">email address</label><br>
-                    <input type="text" id="email" name="email">
+                    <input oninput="checkEmail(this)" type="text" onKeyup="checkform()" id="email" name="email">
+                    <div id="emailError" class="emsg"></div> 
                 </div>  
                 <div class="grid-item">
                     <label for="pw1">password</label><br>
-                    <input type="text" id="pw1" name="pw1">
+                    <input oninput="checkPassword(this)" type="password" onKeyup="checkform()" id="pw1" name="pw1">
+                    <div id="pw1Error" class="emsg"></div> 
                 </div>
                 <div class="grid-item">
                     <label for="pw2">confirm password</label><br>
-                    <input type="text" id="pw2" name="pw2">
+                    <input oninput="matchPassword(this)" type="password" onKeyup="checkform()" id="pw2" name="pw2">
+                    <div id="pw2Error" class="emsg"></div> 
                 </div>
                 <div class="grid-item confirm-button">
-                    <button type="submit" class="full">confirm</button>
+                    <button onclick="getInfo()" type="submit" class="full" id="confirm" disabled="disabled">confirm</button>
                 </div>
             </div>
         </form>
-        <script src="js/create-account.js"></script>
+        <script src="create-account.js"></script>
     </body>
 </html>

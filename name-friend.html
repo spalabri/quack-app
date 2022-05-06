@@ -16,12 +16,14 @@
                     <img src="img/mochiko.png"><br>
                 </div>
                 <div class="grid-item">
-                    <input type="text" id="friendname" name="friendname"><br>
+                    <input oninput="checkName(this)" type="text" id="friendname" onKeyup="checkform()" name="friendname">
+                    <div id="friendnameError" class="emsg"></div>
+                    <br>
                 </div>
                 <div class="grid-item">
-                    <button type="submit" class="full">confirm</button>
+                    <button onclick="getFriendName()" type="submit" class="full" id="confirm" disabled="disabled" >confirm</button>
                 </div>
         </form>
-        <!-- <script src="js/create-account.js"></script> -->
+        <script src="create-account.js"></script>
     </body>
 </html>
