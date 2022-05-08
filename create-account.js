@@ -99,12 +99,10 @@ function getInfo() {
     const email = document.getElementById('email').value;
     const p1 = document.getElementById('pw1').value;
     const p2 = document.getElementById('pw2').value;
-    alert("Hello! " + first + " " + last + "I am an alert box!" +" Your password is: " + p1 + " email is: " + email);
   }
 
 function getFriendName() {
     const friend = document.getElementById('friendname').value;
-    alert("Hello " + friend);
 }
 
 // To check if all inputs in form have been filled in
