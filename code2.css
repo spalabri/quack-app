@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "srproj";
+    src: url("Srprojfont-Regular.ttf");
+ }
+
+.js-box {
+    background-color: #FFF9E6;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 1rem;
+    width: 85%;
+    margin: auto;
+    padding: 1rem;
+ }
+
+h1 {
+    font-family: "srproj";
+    color: #292B2E;
+    font-size: 4rem;
+    margin: 1rem 0rem 1rem 1.5rem;
+}
+
+.js-lesson-item {
+    background-color: #FBE7D5;
+    margin: 2rem;
+    border-radius: 1rem;
+    color: #292B2E;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+}
+
+.js-lesson-header {
+    display: grid;
+    grid-template-columns: 85% 15%;
+}
+
+.js-lesson-sections {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+h3 {
+    font-family: "srproj";
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+p {
+    font-family: 'SF Pro Display';
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: #292B2E;
+}
+
+button {
+    font-family: "srproj";
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #292B2E;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
