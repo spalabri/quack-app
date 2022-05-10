@@ -67,4 +67,34 @@ function defaultCursor() {
   body.style.cursor = "default";
 }
 
-animate();
+function tutorial() {
+  var tutorialModal = document.getElementById("tutorialModal");
+  tutorialModal.style.display = "block";
+}
+
+function skipTutorial(tutorialModal) {
+  var tutorialModal = document.getElementById(tutorialModal);
+  tutorialModal.style.display = "none";
+  animate();
+}
+
+function changeModalContent(evt, tutorialNumber) {
+    // Declare all variables
+    var i, tutorialcontent, tutoriallinks;
+
+    tutorialcontent = document.getElementsByClassName("tutorial-content");
+    for (i = 0; i < tutorialcontent.length; i++) {
+      tutorialcontent[i].style.display = "none";
+    }
+
+    tutoriallinks = document.getElementsByClassName("tutoriallinks");
+    for (i = 0; i < tutoriallinks.length; i++) {
+      tutoriallinks[i].className = tutoriallinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tutorialNumber).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  tutorial();
+  changeModalContent(event, 'tutorial1');

@@ -310,10 +310,12 @@ img.bg {
 }
 
 /* TUTORIAL MODALS --------- */
+/* TUTORIAL 1 */
 .tutorial-modal {
   display: none; 
+  text-align: center;
   position: fixed; 
-  z-index: 2; 
+  z-index: 1; 
   left: 0;
   top: 0;
   width: 100%; 
@@ -325,9 +327,71 @@ img.bg {
 
 .tutorial-modal-content {
   background-color: #FFF9E6;
-  margin: 20% auto; 
+  margin: 12% auto; 
   padding: 20px;
   border: 1px solid #888;
   width: 40%; 
   border-radius: 1rem;  
+}
+
+.tutorial-modal h1 {
+  text-align: center;
+  font-family: 'Srprojfont-Regular';
+  font-size: 4rem;
+  color: #292B2E;
+}
+
+.tutorial-modal p {
+  font-family: 'SF Pro Display', sans-serif;
+  color: #000000;
+  letter-spacing: 0.1rem;
+  line-height: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.tutorial-modal button {
+  font-family: 'Srprojfont-Regular';
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #292B2E;
+  cursor: pointer;
+  border: none;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tutorial-modal a {
+  text-transform: uppercase;
+  font-family: 'SF Pro Display', sans-serif;
+  color: #545454;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tutorial-modal a:hover {
+  cursor: pointer;
+}
+
+/* TUTORIAL 2 & 3 GRIDS */
+.tutorial-modal h3 {
+  font-family: 'SF Pro Display', sans-serif;
+  color: #000000;
+  letter-spacing: 0.1rem;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+.grid-captions {
+  grid-column: 1 / span 3;
+  text-align: left;
+}
+
+.grid-captions.first-caption {
+  grid-row: 1;
 }

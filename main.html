@@ -14,6 +14,58 @@
             <a class="user-name">Fiona's Friend</a>
             <a href="#default" class="pet-name">mochiko</a>
         </div>
+        <!--TUTORIAL MODAL-->
+        <div id="tutorialModal" class="tutorial-modal">
+            <div class="tutorial-modal-content">
+                <div class="tutorial-div">
+                    <div id="tutorial1" class="tutorial-content">
+                        <h1>welcome to quack!</h1>
+                        <p><b>Quack</b> is a virtual game that allows</p>
+                        <p>you to learn and improve your</p>
+                        <p>coding skills by interacting with a</p>
+                        <p>digital friend.</p>
+                        <br>
+                        <p>Let's go through all the ways we</p>
+                        <p>can take care of <b>Mochiko</b>!</p>
+                        <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial2')">next</button>
+                        <br>
+                        <a class="skip-tutorial" onclick="skipTutorial('tutorialModal')">skip tutorial</a>
+                    </div>
+                    <div id="tutorial2" class="tutorial-content">
+                        <div class="grid-captions first-caption">
+                            <h3>These meters indicate <b>how Mochiko is doing</b>.</h3>
+                            <br>
+                        </div>
+                        <div class="grid-item back-button">
+                            <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial1')">back</button>
+                        </div>
+                        <div class="grid-item skip-link">
+                            <a class="skip-tutorial" onclick="skipTutorial('tutorialModal')">skip tutorial</a>
+                        </div>
+                        <div class="grid-item next-button">
+                            <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial3')">next</button>
+                        </div>
+                    </div>
+                    <div id="tutorial3" class="tutorial-content">
+                        <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial2')">back</button>
+                        <br>
+                        <a class="skip-tutorial" onclick="skipTutorial('tutorialModal')">skip tutorial</a>
+                        <br>
+                        <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial4')">next</button>
+                    </div>
+                    <div id="tutorial4" class="tutorial-content">
+                        <h1>got the hang of it?</h1>
+
+                        <p>Be sure to find "<b>Restart Tutorial</b>"</p>
+                        <p>in the <b>Settings</b>, if you ever need</p>
+                        <p>a refresher.</p>
+                
+                        <button onclick="skipTutorial('tutorialModal')">let's play!</button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- SLEEP MODAL -->
         <div id="sleepModal" class="modal">
             <div class="modal-content">
@@ -90,7 +142,6 @@
             <button type="button" class="nav-button" id="shopButton" onclick="shop()">shop</button>
             <button type="button" class="nav-button">code</button>
             <button type="button" class="nav-button" id="sleepButton" onclick="sleep()">sleep</button>
-            <button type="button" class="nav-button">connect</button>
             <button type="button" class="nav-button"onclick="foodCursor()">feed</button>
         </div>
         <canvas id="canvas1" onclick="defaultCursor()"></canvas>
