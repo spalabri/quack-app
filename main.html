@@ -32,26 +32,99 @@
                         <a class="skip-tutorial" onclick="skipTutorial('tutorialModal')">skip tutorial</a>
                     </div>
                     <div id="tutorial2" class="tutorial-content">
-                        <div class="grid-captions first-caption">
-                            <h3>These meters indicate <b>how Mochiko is doing</b>.</h3>
-                            <br>
-                        </div>
-                        <div class="grid-item back-button">
-                            <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial1')">back</button>
-                        </div>
-                        <div class="grid-item skip-link">
-                            <a class="skip-tutorial" onclick="skipTutorial('tutorialModal')">skip tutorial</a>
-                        </div>
-                        <div class="grid-item next-button">
-                            <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial3')">next</button>
+                        <div class="tutorial2-grid">
+                            <div class="grid-captions first-caption">
+                                <h3>These meters indicate <b>how Mochiko is doing</b>.</h3>
+                                <br>
+                            </div>
+                            <div class="grid-item tutorial2-body">
+                                <div class="body-image">
+                                    <img src="img/heart.png">
+                                </div>
+                                <div class="body-text">
+                                    <p><b>Love</b>: Show your friend some love by completing coding lessons with them.</p>
+                                </div>
+                                <div class="body-image">
+                                    <img src="img/food.png">
+                                </div>
+                                <div class="body-text">
+                                    <p><b>Hunger</b>: Feed your friend with food from the shop.</p>
+                                </div>
+                                <div class="body-image">
+                                    <img src="img/sleep.png">
+                                </div>
+                                <div class="body-text">
+                                    <p><b>Sleep</b>: Rest is a must for you and your friend! Be sure to let them sleep when you're not spending time with them.</p>
+                                </div>
+                                <div class="body-image">
+                                    <img src="img/money.png">
+                                </div>
+                                <div class="body-text">
+                                    <p><b>Money</b>: Earn money for food, accessories, and furniture by completing coding lessons.</p>
+                                </div>
+                            </div>
+                            <div class="grid-captions last-caption">
+                                <p>Be careful! If the meters get <b>too low</b>, Mochiko will run away. To. get them back, you'd need to complete extra coding challenges.</p>
+                            </div>
+                            <div class="grid-item back-button">
+                                <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial1')">back</button>
+                            </div>
+                            <div class="grid-item skip-link">
+                                <a class="skip-tutorial" onclick="skipTutorial('tutorialModal')">skip tutorial</a>
+                            </div>
+                            <div class="grid-item next-button">
+                                <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial3')">next</button>
+                            </div>
                         </div>
                     </div>
                     <div id="tutorial3" class="tutorial-content">
-                        <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial2')">back</button>
-                        <br>
-                        <a class="skip-tutorial" onclick="skipTutorial('tutorialModal')">skip tutorial</a>
-                        <br>
-                        <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial4')">next</button>
+                        <div class="tutorial3-grid">
+                            <div class="tutorial3-grid-captions">
+                                <h3>Here's <b>where you can maintain Mochiko's meters</b> shown above.</h3>
+                                <br>
+                            </div>
+                            <div class="grid-item tutorial3-body">
+                                <div class="body-button">
+                                    <h4>home</h4>
+                                </div>
+                                <div class="body-text">
+                                    <p>This takes you back to your home screen.</p>
+                                </div>
+                                <div class="body-button">
+                                    <h4>shop</h4>                
+                                </div>
+                                <div class="body-text">
+                                    <p>Buy all the food, accessories, and furniture your friend could ever desire.</p>
+                                </div>
+                                <div class="body-button">
+                                    <h4>code</h4>
+                                </div>
+                                <div class="body-text">
+                                    <p>Complete coding lessons with your friend! Earn money to shop and hearts to fill up that love meter.</p>
+                                </div>
+                                <div class="body-button">
+                                    <h4>sleep</h4>
+                                </div>
+                                <div class="body-text">
+                                    <p>Have your friend sleep while you're away.</p>
+                                </div>
+                                <div class="body-button">
+                                    <h4>connect</h4>
+                                </div>
+                                <div class="body-text">
+                                    <p>Connect with friends to code with them and send them gifts.</p>
+                                </div>
+                            </div>
+                            <div class="grid-item back-button">
+                                <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial2')">back</button>
+                            </div>
+                            <div class="grid-item skip-link">
+                                <a class="skip-tutorial" onclick="skipTutorial('tutorialModal')">skip tutorial</a>
+                            </div>
+                            <div class="grid-item next-button">
+                                <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial4')">next</button>
+                            </div>
+                        </div>
                     </div>
                     <div id="tutorial4" class="tutorial-content">
                         <h1>got the hang of it?</h1>
