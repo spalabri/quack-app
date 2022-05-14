@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "srproj";
+    src: url("Srprojfont-Regular.ttf");
+ }
+
+.settings-box {
+    background-color: #FFF9E6;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 1rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: 8rem;
+    text-align: center;
+ }
+
+h1 {
+    font-family: "srproj";
+    color: #292B2E;
+    font-size: 4rem;
+    margin: 1rem 0rem 1rem 1.5rem;
+    text-align: left;
+}
+
+.settings-buttons {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: bold;
+    color: #292B2E;
+    text-transform: uppercase;
+    background-color: #FBE7D5;
+    letter-spacing: 0.25rem;
+    border: none;
+    border-radius: 0.7rem;
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    width: 90%;
+}
+
+.delete-account {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background-color: #292B2E;
+    letter-spacing: 0.25rem;
+    border: none;
+    border-radius: 0.7rem;
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 15rem;
+    width: 90%;
+}
