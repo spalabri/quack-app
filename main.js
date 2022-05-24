@@ -27,6 +27,33 @@ function animate() {
     id = requestAnimationFrame(animate);
 }
 
+function shop() {
+  canvas.style.transform = "translate(-120%, -50%)";
+  var shopModal = document.getElementById("shopModal");
+  var shopButton = document.getElementById("shopButton");
+  shopModal.style.display = "block";
+  shopDefault();
+}
+
+function exitShop() {
+  canvas.style.transform = "translate(-50%, -50%)";
+  var span = document.getElementsByClassName("nav-close")[0];
+  shopModal.style.display = "none";
+}
+
+function code() {
+  canvas.style.transform = "translate(-120%, -50%)";
+  var codeModal = document.getElementById("codeModal");
+  var codeButton = document.getElementById("codeButton");
+  codeModal.style.display = "block";
+}
+
+function exitCode() {
+  canvas.style.transform = "translate(-50%, -50%)";
+  var span = document.getElementsByClassName("nav-close")[0];
+  codeModal.style.display = "none";
+}
+
 function sleep() {
   var sleepModal = document.getElementById("sleepModal");
   var sleepButton = document.getElementById("sleepButton");
@@ -40,17 +67,17 @@ function wake() {
   id = requestAnimationFrame(animate);
 }
 
-function shop() {
+function settings() {
   canvas.style.transform = "translate(-120%, -50%)";
-  var shopModal = document.getElementById("shopModal");
-  var shopButton = document.getElementById("shopButton");
-  shopModal.style.display = "block";
+  var settingsModal = document.getElementById("settingsModal");
+  var settingsButton = document.getElementById("settingsButton");
+  settingsModal.style.display = "block";
 }
 
-function exitShop() {
+function exitSettings() {
   canvas.style.transform = "translate(-50%, -50%)";
   var span = document.getElementsByClassName("nav-close")[0];
-  shopModal.style.display = "none";
+  settingsModal.style.display = "none";
 }
 
 function foodCursor() {
@@ -78,6 +105,15 @@ function skipTutorial(tutorialModal) {
   animate();
 }
 
+function restartTutorial() {
+  cancelAnimationFrame(id);
+  canvas.style.transform = "translate(-50%, -50%)";
+  settingsModal.style.display = "none";
+  var tutorialModal = document.getElementById("tutorialModal");
+  changeModalContent(event, 'tutorial1');
+  tutorialModal.style.display = "block";
+}
+
 function changeModalContent(evt, tutorialNumber) {
     // Declare all variables
     var i, tutorialcontent, tutoriallinks;
@@ -98,3 +134,47 @@ function changeModalContent(evt, tutorialNumber) {
 
   tutorial();
   changeModalContent(event, 'tutorial1');
+
+function changeShopContent(evt, shopNumber) {
+    // Declare all variables
+    var i, shopcontent, shoplinks;
+
+    shopcontent = document.getElementsByClassName("shop-content");
+    for (i = 0; i < shopcontent.length; i++) {
+      shopcontent[i].style.display = "none";
+    }
+
+    shoplinks = document.getElementsByClassName("shoplinks");
+    for (i = 0; i < shoplinks.length; i++) {
+      shoplinks[i].className = shoplinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(shopNumber).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+function shopDefault() {
+  document.getElementById('shop-grid').style.display = "block";
+  var foodDescriptions = document.getElementsByClassName("food-descriptions");
+  for (i = 0; i < foodDescriptions.length; i++) {
+    foodDescriptions[i].style.display = "none";
+  }
+}
+
+function purchaseModal(item) {
+  var itemName = item;
+  var buyModal = document.getElementById("buyModal");
+  document.getElementById("item-name").innerHTML = "You are purchasing " + item + " for 125";
+  buyModal.style.display = "block";
+}
+
+function exitPurchaseModal() {
+  buyModal.style.display = "none";
+}
+
+function feed() {
+  canvas.style.transform = "translate(-50%, -50%)";
+  buyModal.style.display = "none";
+  shopModal.style.display = "none";
+  foodCursor();
+}

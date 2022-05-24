@@ -80,16 +80,10 @@
                     <div id="tutorial3" class="tutorial-content">
                         <div class="tutorial3-grid">
                             <div class="tutorial3-grid-captions">
-                                <h3>Here's <b>where you can maintain Mochiko's meters</b> shown above.</h3>
+                                <h3>Here's where you can <b>maintain Mochiko's meters</b></h3>
                                 <br>
                             </div>
                             <div class="grid-item tutorial3-body">
-                                <div class="body-button">
-                                    <h4>home</h4>
-                                </div>
-                                <div class="body-text">
-                                    <p>This takes you back to your home screen.</p>
-                                </div>
                                 <div class="body-button">
                                     <h4>shop</h4>                
                                 </div>
@@ -107,12 +101,6 @@
                                 </div>
                                 <div class="body-text">
                                     <p>Have your friend sleep while you're away.</p>
-                                </div>
-                                <div class="body-button">
-                                    <h4>connect</h4>
-                                </div>
-                                <div class="body-text">
-                                    <p>Connect with friends to code with them and send them gifts.</p>
                                 </div>
                             </div>
                             <div class="grid-item back-button">
@@ -152,70 +140,172 @@
         <div id="shopModal" class="nav-modal">
             <div class="shop-modal-content">
                 <button type="button" class="nav-close nav-button" onclick="exitShop()">x</button>
-                <h1>shop</h1>
-                <div class="tab-div">
-                    <!-- Tab links -->
-                    <div class="tab">
-                        <button class="tablinks" onclick="openTab(event, 'food')" id="defaultOpen">food</button>
-                        <button class="tablinks" onclick="openTab(event, 'accessories')">accessories</button>
-                        <button class="tablinks" onclick="openTab(event, 'furniture')">furniture</button>
+                <div class="shop-div">
+                    <!--MAIN MENU -->
+                    <div id="shop-grid" class="shop-content">
+                        <h1>shop</h1>
+                        <div class="tab-div">
+                            <!-- Tab links -->
+                            <div class="tab">
+                                <button class="tablinks" onclick="openTab(event, 'food')" id="defaultOpen">food</button>
+                                <button class="tablinks" onclick="openTab(event, 'accessories')">accessories</button>
+                                <button class="tablinks" onclick="openTab(event, 'furniture')">furniture</button>
+                            </div>
+                            <!-- Tab content -->
+                            <div id="food" class="tab-content">
+                                <div class="food-grid">
+                                    <div class="food-item" onclick="changeShopContent(event, 'lechon')">
+                                        <div class="food-image">
+                                            <img src="img/lechon.png">
+                                        </div>
+                                        <h3>lechon</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>125</p>
+                                    </div>
+                                    <div class="food-item" onclick="changeShopContent(event, 'fufu')">
+                                        <div class="food-image">
+                                            <img src="img/fufu-egusi.png">
+                                        </div>
+                                        <h3>fufu and egusi</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>125</p>
+                                    </div>
+                                    <div class="food-item" onclick="changeShopContent(event, 'calzone')">
+                                        <div class="food-image">
+                                            <img src="img/calzone.png">
+                                        </div>
+                                        <h3>calzone</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>125</p>
+                                    </div>
+                                    <div class="food-item" onclick="changeShopContent(event, 'sushi')">
+                                        <div class="food-image">
+                                            <img src="img/sushi.png">
+                                        </div>
+                                        <h3>sushi</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>125</p>
+                                    </div>
+                                    <div class="food-item" onclick="changeShopContent(event, 'tteokbokki')">
+                                        <div class="food-image">
+                                            <img src="img/tteokbokki.png">
+                                        </div>
+                                        <h3>tteokbokki</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>125</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Tab content -->
-                    <div id="food" class="tab-content">
-                        <div class="food-grid">
-                            <div class="food-item">
-                                <div class="food-image">
-                                    <img src="img/lechon.png">
-                                </div>
-                                <h3>lechon</h3>
-                                <img class="money-bag" src="img/money.png">
-                                <p>125</p>
-                            </div>
-                            <div class="food-item">
-                                <div class="food-image">
-                                    <img src="img/fufu-egusi.png">
-                                </div>
-                                <h3>fufu and egusi</h3>
-                                <img class="money-bag" src="img/money.png">
-                                <p>125</p>
-                            </div>
-                            <div class="food-item">
-                                <div class="food-image">
-                                    <img src="img/calzone.png">
-                                </div>
-                                <h3>calzone</h3>
-                                <img class="money-bag" src="img/money.png">
-                                <p>125</p>
-                            </div>
-                            <div class="food-item">
-                                <div class="food-image">
-                                    <img src="img/sushi.png">
-                                </div>
-                                <h3>sushi</h3>
-                                <img class="money-bag" src="img/money.png">
-                                <p>125</p>
-                            </div>
-                            <div class="food-item">
-                                <div class="food-image">
-                                    <img src="img/tteokbokki.png">
-                                </div>
-                                <h3>tteokbokki</h3>
-                                <img class="money-bag" src="img/money.png">
-                                <p>125</p>
-                            </div>
+                    <!--ITEM DESCRIPTIONS-->
+                    <div id="lechon" class="shop-content food-descriptions">
+                        <button onclick="shopDefault()">Back</button>
+                        <img src="img/lechon.png" width="200px" height="200px">
+                        <button onclick="purchaseModal('lechon')">Buy</button>
+                    </div>
+                    <div id="fufu" class="shop-content food-descriptions">
+                        <button onclick="shopDefault()">Back</button>
+                        <img src="img/fufu-egusi.png" width="200px" height="200px">
+                        <button onclick="purchaseModal('fufu')">Buy</button>
+                    </div>
+                    <div id="calzone" class="shop-content food-descriptions">
+                        <button onclick="shopDefault()">Back</button>
+                        <img src="img/calzone.png" width="200px" height="200px">
+                        <button onclick="purchaseModal('calzone')">Buy</button>
+                    </div>
+                    <div id="sushi" class="shop-content food-descriptions">
+                        <button onclick="shopDefault()">Back</button>
+                        <img src="img/sushi.png" width="200px" height="200px">
+                        <button onclick="purchaseModal('sushi')">Buy</button>
+                    </div>
+                    <div id="tteokbokki" class="shop-content food-descriptions">
+                        <button onclick="shopDefault()">Back</button>
+                        <img src="img/tteokbokki.png" width="200px" height="200px">
+                        <button onclick="purchaseModal('tteokbokki')">Buy</button>
+                    </div>
+                </div>
+                <!--PURCHASE MODAL-->
+                <div id="buyModal" class="modal">
+                    <div class="modal-content">
+                        <p class="modal-heading">are you sure?</p>
+                        <p id="item-name" class="modal-text"></p>
+                        <button onclick="exitPurchaseModal()">Cancel</button>
+                        <button onclick="feed()">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CODE MODAL -->
+        <div id="codeModal" class="nav-modal">
+            <div class="code-modal-content">
+                <button type="button" class="nav-close nav-button" onclick="exitCode()">x</button>
+                <h1>code</h1>
+                <div class="lessons-grid">
+                    <div class="lesson-item">
+                        <h3>java</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>javascript</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>html</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>css</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>python</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>c</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- SETTINGS MODAL -->
+        <div id="settingsModal" class="nav-modal">
+            <div class="settings-modal-content">
+                <button type="button" class="nav-close nav-button" onclick="exitSettings()">x</button>
+                <h1>settings</h1>
+                <button class="settings-buttons">update friend name</button>
+                <br>
+                <button class="settings-buttons" onclick="restartTutorial()">restart tutorial</button>
+                <br>
+                <button class="delete-account">delete account</button>
+            </div>
+        </div>
         <!-- FOOTER -->
         <div class="footer">
             <p class="disclaimer">Your browser window is too small. Please resize.</p>
-            <button type="button" class="nav-button">home</button>
             <button type="button" class="nav-button" id="shopButton" onclick="shop()">shop</button>
-            <button type="button" class="nav-button">code</button>
+            <button type="button" class="nav-button" onclick="code()">code</button>
             <button type="button" class="nav-button" id="sleepButton" onclick="sleep()">sleep</button>
-            <button type="button" class="nav-button"onclick="foodCursor()">feed</button>
+            <button type="button" class="nav-button" onclick="settings()">settings</button>
         </div>
         <canvas id="canvas1" onclick="defaultCursor()"></canvas>
         <script src="main.js"></script>
