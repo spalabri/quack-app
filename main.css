@@ -182,7 +182,7 @@ img.bg {
   cursor: pointer;
 }
 
-/* SHOP MODAL - refactored shop.css -------------------------- */
+/* SHOP MODAL */
 .nav-modal {
   display: none; 
   position: fixed; 
@@ -307,6 +307,92 @@ img.bg {
   letter-spacing: 0.1rem;
   display: inline;
   margin-top: 1.6rem;
+}
+
+.food-descriptions button, #buyModal button {
+  font-family: 'Srprojfont-Regular';
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #292B2E;
+  cursor: pointer;
+  border: none;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.food-description-heading {
+  font-family: 'Srprojfont-Regular';
+  font-size: 3rem;
+  font-weight: 700;
+  color: #292B2E;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.food-description-text {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  color: #292B2E;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.food-description-img {
+  display: flex;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+.food-description-back {
+  margin-left: 1rem;
+}
+
+.food-description-buy {
+  margin-right: 1rem;
+  display: inline;
+  margin-left: 80.5%;
+}
+
+.food-description-money-icon {
+  margin-left: 45%;
+  margin-bottom: -0.5rem;
+}
+
+.food-description-price {
+  display: inline;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  color: #292B2E;
+}
+
+.cancel-purchase {
+  margin-left: 1rem;
+}
+
+.confirm-purchase {
+  display: inline;
+  margin-left: 66%;
+  margin-right: 1rem;
+}
+
+#directionsModal {
+  padding-top: 10%;
+  display: none; 
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+#feed-directions {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  color: #292B2E;
 }
 
 /* TUTORIAL MODALS --------- */

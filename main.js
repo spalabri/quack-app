@@ -80,20 +80,6 @@ function exitSettings() {
   settingsModal.style.display = "none";
 }
 
-function foodCursor() {
-  var body = document.body;
-  body.id = ( body.id ) ? body.id : 'body_id'; // ffox
-
-  body.use_custom_cursor = !body.use_custom_cursor;
-
-  body.style.cursor = 'url(https://cur.cursors-4u.net/food/foo-6/foo523.cur), auto';
-}
-
-function defaultCursor() {
-  var body = document.body;
-  body.style.cursor = "default";
-}
-
 function tutorial() {
   var tutorialModal = document.getElementById("tutorialModal");
   tutorialModal.style.display = "block";
@@ -115,7 +101,6 @@ function restartTutorial() {
 }
 
 function changeModalContent(evt, tutorialNumber) {
-    // Declare all variables
     var i, tutorialcontent, tutoriallinks;
 
     tutorialcontent = document.getElementsByClassName("tutorial-content");
@@ -135,8 +120,7 @@ function changeModalContent(evt, tutorialNumber) {
   tutorial();
   changeModalContent(event, 'tutorial1');
 
-function changeShopContent(evt, shopNumber) {
-    // Declare all variables
+function changeShopContent(evt, shopNumber, price) {
     var i, shopcontent, shoplinks;
 
     shopcontent = document.getElementsByClassName("shop-content");
@@ -151,7 +135,20 @@ function changeShopContent(evt, shopNumber) {
 
     document.getElementById(shopNumber).style.display = "block";
     evt.currentTarget.className += " active";
+
+    getPrice(price);
 }
+
+function getPrice(price) {
+  let foodDescriptions = document.getElementsByClassName("food-descriptions");
+  let prices = document.getElementsByClassName("food-description-price");
+  for (i = 0; i < prices.length; i++) {
+    for (j = 0; j < foodDescriptions.length; j++) {
+      if (i == j) prices[i].innerHTML = price;
+    }
+  }
+}
+
 
 function shopDefault() {
   document.getElementById('shop-grid').style.display = "block";
@@ -161,11 +158,13 @@ function shopDefault() {
   }
 }
 
-function purchaseModal(item) {
-  var itemName = item;
+var cursorItem = item;
+
+function purchaseModal(item, price) {
   var buyModal = document.getElementById("buyModal");
-  document.getElementById("item-name").innerHTML = "You are purchasing " + item + " for 125";
+  document.getElementById("item-name").innerHTML = "You are purchasing " + item + " for " + price;
   buyModal.style.display = "block";
+  cursorItem = item;
 }
 
 function exitPurchaseModal() {
@@ -176,5 +175,39 @@ function feed() {
   canvas.style.transform = "translate(-50%, -50%)";
   buyModal.style.display = "none";
   shopModal.style.display = "none";
-  foodCursor();
+  cursorItem = assignCursor(cursorItem);
+}
+
+function assignCursor(item) {
+  var body = document.body;
+  body.id = ( body.id ) ? body.id : 'body_id'; // ffox
+
+  body.use_custom_cursor = !body.use_custom_cursor;
+
+  document.getElementById('directionsModal').style.display = "block";
+  document.getElementById("feed-directions").innerHTML = "Click your pet to feed them";
+
+  switch(item) {
+    case 'lechon':
+      body.style.cursor = 'url(cursor/lechon.png), auto';
+      return 'lechon';
+    case 'calzone':
+      body.style.cursor = 'url(cursor/calzone.png), auto';
+      return 'calzone';
+    case 'fufu':
+      body.style.cursor = 'url(cursor/fufu-egusi.png), auto';
+      return 'fufu';
+    case 'sushi':
+      body.style.cursor = 'url(cursor/sushi.png), auto';
+      return 'sushi';
+    case 'tteokbokki':
+      body.style.cursor = 'url(cursor/tteokbokki.png), auto';
+      return 'tteokbokki';
+  }
+}
+
+function defaultCursor() {
+  var body = document.body;
+  body.style.cursor = "default";
+  document.getElementById('directionsModal').style.display = "none";
 }

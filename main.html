@@ -154,7 +154,7 @@
                             <!-- Tab content -->
                             <div id="food" class="tab-content">
                                 <div class="food-grid">
-                                    <div class="food-item" onclick="changeShopContent(event, 'lechon')">
+                                    <div class="food-item" onclick="changeShopContent(event, 'lechon', '125')">
                                         <div class="food-image">
                                             <img src="img/lechon.png">
                                         </div>
@@ -162,37 +162,37 @@
                                         <img class="money-bag" src="img/money.png">
                                         <p>125</p>
                                     </div>
-                                    <div class="food-item" onclick="changeShopContent(event, 'fufu')">
+                                    <div class="food-item" onclick="changeShopContent(event, 'fufu', '150')">
                                         <div class="food-image">
                                             <img src="img/fufu-egusi.png">
                                         </div>
                                         <h3>fufu and egusi</h3>
                                         <img class="money-bag" src="img/money.png">
-                                        <p>125</p>
+                                        <p>150</p>
                                     </div>
-                                    <div class="food-item" onclick="changeShopContent(event, 'calzone')">
+                                    <div class="food-item" onclick="changeShopContent(event, 'calzone', '100')">
                                         <div class="food-image">
                                             <img src="img/calzone.png">
                                         </div>
                                         <h3>calzone</h3>
                                         <img class="money-bag" src="img/money.png">
-                                        <p>125</p>
+                                        <p>100</p>
                                     </div>
-                                    <div class="food-item" onclick="changeShopContent(event, 'sushi')">
+                                    <div class="food-item" onclick="changeShopContent(event, 'sushi', '20')">
                                         <div class="food-image">
                                             <img src="img/sushi.png">
                                         </div>
                                         <h3>sushi</h3>
                                         <img class="money-bag" src="img/money.png">
-                                        <p>125</p>
+                                        <p>20</p>
                                     </div>
-                                    <div class="food-item" onclick="changeShopContent(event, 'tteokbokki')">
+                                    <div class="food-item" onclick="changeShopContent(event, 'tteokbokki', '100')">
                                         <div class="food-image">
                                             <img src="img/tteokbokki.png">
                                         </div>
                                         <h3>tteokbokki</h3>
                                         <img class="money-bag" src="img/money.png">
-                                        <p>125</p>
+                                        <p>100</p>
                                     </div>
                                 </div>
                             </div>
@@ -200,29 +200,59 @@
                     </div>
                     <!--ITEM DESCRIPTIONS-->
                     <div id="lechon" class="shop-content food-descriptions">
-                        <button onclick="shopDefault()">Back</button>
-                        <img src="img/lechon.png" width="200px" height="200px">
-                        <button onclick="purchaseModal('lechon')">Buy</button>
+                        <p class="food-description-heading">lechon</p>
+                        <img class="food-description-img" src="img/lechon.png">
+                        <img class="food-description-money-icon" src="img/money.png">
+                        <p class="food-description-price"></p>
+                        <p class="food-description-text">Lechon, derived from a Spanish word for roasted suckling pig is one of the most popular 
+                            dishes in the Philippines. The slowly-roasted suckling pig is usually stuffed with lemongrass, tamarind, garlic, onions, and chives, 
+                            and is then roasted on a large bamboo spit over an open fire.</p>
+                        <button class="food-description-back" onclick="shopDefault()">back</button>
+                        <button class="food-description-buy" onclick="purchaseModal('lechon', '125')">buy</button>
                     </div>
                     <div id="fufu" class="shop-content food-descriptions">
-                        <button onclick="shopDefault()">Back</button>
-                        <img src="img/fufu-egusi.png" width="200px" height="200px">
-                        <button onclick="purchaseModal('fufu')">Buy</button>
+                        <p class="food-description-heading">fufu and egusi</p>
+                        <img class="food-description-img" src="img/fufu-egusi.png">
+                        <img class="food-description-money-icon" src="img/money.png">
+                        <p class="food-description-price"></p>
+                        <p class="food-description-text">Fufu (or fufuo, foofoo, foufou) is a dough-like food found in West African cuisine. 
+                            It is often made in the traditional Ghanaian, Ivorian, Liberian, and Cuban method of separately mixing and pounding equal portions 
+                            of boiled cassava with green plantain or cocoyam, or by mixing cassava/plantains or cocoyam flour with water and stirring it on a stove.
+                        </p>
+                        <button class="food-description-back" onclick="shopDefault()">back</button>
+                        <button class="food-description-buy" onclick="purchaseModal('fufu', '150')">buy</button>
                     </div>
                     <div id="calzone" class="shop-content food-descriptions">
-                        <button onclick="shopDefault()">Back</button>
-                        <img src="img/calzone.png" width="200px" height="200px">
-                        <button onclick="purchaseModal('calzone')">Buy</button>
+                        <p class="food-description-heading">calzone</p>
+                        <img class="food-description-img" src="img/calzone.png">
+                        <img class="food-description-money-icon" src="img/money.png">
+                        <p class="food-description-price"></p>
+                        <p class="food-description-text">A calzone is an Italian oven-baked folded pizza, often described as a turnover, made with leavened dough. 
+                            It originated in Naples in the 18th century. A typical calzone is made from salted bread dough, baked in an oven and is stuffed with salami, 
+                            ham or vegetables, mozzarella, ricotta and Parmesan or pecorino cheese, as well as an egg.</p>
+                        <button class="food-description-back" onclick="shopDefault()">back</button>
+                        <button class="food-description-buy" onclick="purchaseModal('calzone', '100')">buy</button>
                     </div>
                     <div id="sushi" class="shop-content food-descriptions">
-                        <button onclick="shopDefault()">Back</button>
-                        <img src="img/sushi.png" width="200px" height="200px">
-                        <button onclick="purchaseModal('sushi')">Buy</button>
+                        <p class="food-description-heading">sushi</p>
+                        <img class="food-description-img" src="img/sushi.png">
+                        <img class="food-description-money-icon" src="img/money.png">
+                        <p class="food-description-price"></p>
+                        <p class="food-description-text">Sushi is a Japanese dish of prepared vinegared rice (鮨飯, sushi-meshi), usually with some sugar and salt, 
+                            accompanied by a variety of ingredients (ねた, neta), such as seafood, often raw, and vegetables. </p>
+                        <button class="food-description-back" onclick="shopDefault()">back</button>
+                        <button class="food-description-buy" onclick="purchaseModal('sushi', '20')">buy</button>
                     </div>
                     <div id="tteokbokki" class="shop-content food-descriptions">
-                        <button onclick="shopDefault()">Back</button>
-                        <img src="img/tteokbokki.png" width="200px" height="200px">
-                        <button onclick="purchaseModal('tteokbokki')">Buy</button>
+                        <p class="food-description-heading">tteokbokki</p>
+                        <img class="food-description-img" src="img/tteokbokki.png">
+                        <img class="food-description-money-icon" src="img/money.png">
+                        <p class="food-description-price"></p>
+                        <p class="food-description-text">Tteokbokki (떡볶이), or simmered rice cake, is a popular Korean food made from small-sized garae-tteok (long, 
+                            white, cylinder-shaped rice cakes) called tteokmyeon (떡면; "rice cake noodles") or commonly tteokbokki-tteok (떡볶이 떡; "tteokbokki rice cakes").
+                             Eomuk (fish cakes), boiled eggs, and scallions are some common ingredients paired with tteokbokki in dishes. </p>
+                        <button class="food-description-back" onclick="shopDefault()">back</button>
+                        <button class="food-description-buy" onclick="purchaseModal('tteokbokki', '100')">buy</button>
                     </div>
                 </div>
                 <!--PURCHASE MODAL-->
@@ -230,8 +260,8 @@
                     <div class="modal-content">
                         <p class="modal-heading">are you sure?</p>
                         <p id="item-name" class="modal-text"></p>
-                        <button onclick="exitPurchaseModal()">Cancel</button>
-                        <button onclick="feed()">Confirm</button>
+                        <button class="cancel-purchase" onclick="exitPurchaseModal()">cancel</button>
+                        <button class="confirm-purchase" onclick="feed()">confirm</button>
                     </div>
                 </div>
             </div>
@@ -298,6 +328,10 @@
                 <br>
                 <button class="delete-account">delete account</button>
             </div>
+        </div>
+        <!--DIRECTIONS-->
+        <div id="directionsModal">
+            <p id="feed-directions"></p>
         </div>
         <!-- FOOTER -->
         <div class="footer">
