@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 const CANVAS_WIDTH = canvas.width = 600; // Must be the same dimensions as the one given to the CSS
 const CANVAS_HEIGHT= canvas.height = 600; // Must be the same dimensions as the one given to the CSS
 const petImage = new Image();
-petImage.src = 'images/cute_dog.png';
+petImage.src = 'img/cute_dog.png';
 const spriteWidth = 547;
 const spriteHeight = 481;
 let frameX = 0;
@@ -210,4 +210,28 @@ function defaultCursor() {
   var body = document.body;
   body.style.cursor = "default";
   document.getElementById('directionsModal').style.display = "none";
+}
+
+function openJavascript() {
+  cancelAnimationFrame(id);
+  codeModal.style.display = "none";
+  var javascriptModal = document.getElementById("javascriptModal");
+  javascriptModal.style.display = "block";
+}
+
+function closeJavascript() {
+  id = requestAnimationFrame(animate);
+  javascriptModal.style.display = "none";
+  codeModal.style.display = "block";
+}
+
+function openIdeModal() {
+  javascriptModal.style.display = "none";
+  var ideModal = document.getElementById("ideModal");
+  ideModal.style.display = "block";
+}
+
+function closeIdeModal() {
+  ideModal.style.display = "none";
+  javascriptModal.style.display = "block";
 }

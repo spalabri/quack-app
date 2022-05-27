@@ -263,13 +263,13 @@ img.bg {
   border-radius: 0rem 0.5rem 0.5rem 0.5rem;
 }
 
-.food-grid {
+.item-grid {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   justify-content: center;
 }
 
-.food-item {
+.item {
   display: grid;
   grid-template-columns: 80% 15% 5%;
   grid-template-rows: 8rem 2rem;
@@ -281,9 +281,10 @@ img.bg {
   padding: 0rem 2rem 1rem 1rem;
 } 
 
-.food-image {
+.item-image {
   grid-column: 1 / span 3;
   grid-row: 1;
+  margin-top: -0.5rem;
 }
 
 .tab-content h3 {
@@ -683,4 +684,117 @@ img.bg {
 
 .settings-buttons {
   cursor: pointer;
+}
+
+/* JAVASCRIPT */
+.javascript-modal-content {
+  background-color: #FFF9E6;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 1rem;
+  width: 85%;
+  margin-left: auto;
+  margin-right: 5rem;
+  margin-top: 8%; 
+  margin-bottom: 5%;
+  padding: 20px; 
+}
+
+.js-lesson-item {
+  background-color: #FBE7D5;
+  margin: 2rem;
+  border-radius: 1rem;
+  color: #292B2E;
+  padding: 0rem 1.5rem 1.5rem 1.5rem;
+}
+
+.js-lesson-header {
+  display: grid;
+  grid-template-columns: 85% 15%;
+}
+
+.js-lesson-sections {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.javascript-modal-content h3 {
+  font-family: 'Srprojfont-Regular';
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.javascript-modal-content p {
+  font-family: 'SF Pro Display';
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: #292B2E;
+}
+
+.start-lesson {
+  font-family: 'Srprojfont-Regular';
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #292B2E;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* IDE CONTENT */
+
+.ide-modal-content {
+  background-color: #FFF9E6;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 1rem;
+  width: 85%;
+  height: 68%;
+  margin-left: auto;
+  margin-right: 5rem;
+  margin-top: 8%; 
+  margin-bottom: 5%;
+  padding: 20px; 
+}
+
+.ide {
+  overflow-y: scroll;
+  height: 70%;
+}
+
+.ide-description {
+  font-family: 'SF Pro Display';
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: #292B2E;
+  margin-bottom: 2rem;
+  margin-left: 1.7rem;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
