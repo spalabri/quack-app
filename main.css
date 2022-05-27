@@ -182,7 +182,7 @@ img.bg {
   cursor: pointer;
 }
 
-/* SHOP MODAL - refactored shop.css -------------------------- */
+/* SHOP MODAL */
 .nav-modal {
   display: none; 
   position: fixed; 
@@ -217,7 +217,7 @@ img.bg {
 
 .nav-close {
   color: #FFFFFF;
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   display: flex;
   justify-content: center;
   width: 10%;
@@ -263,13 +263,13 @@ img.bg {
   border-radius: 0rem 0.5rem 0.5rem 0.5rem;
 }
 
-.food-grid {
+.item-grid {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   justify-content: center;
 }
 
-.food-item {
+.item {
   display: grid;
   grid-template-columns: 80% 15% 5%;
   grid-template-rows: 8rem 2rem;
@@ -281,9 +281,10 @@ img.bg {
   padding: 0rem 2rem 1rem 1rem;
 } 
 
-.food-image {
+.item-image {
   grid-column: 1 / span 3;
   grid-row: 1;
+  margin-top: -0.5rem;
 }
 
 .tab-content h3 {
@@ -309,6 +310,92 @@ img.bg {
   margin-top: 1.6rem;
 }
 
+.food-descriptions button, #buyModal button {
+  font-family: 'Srprojfont-Regular';
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #292B2E;
+  cursor: pointer;
+  border: none;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.food-description-heading {
+  font-family: 'Srprojfont-Regular';
+  font-size: 3rem;
+  font-weight: 700;
+  color: #292B2E;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.food-description-text {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  color: #292B2E;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.food-description-img {
+  display: flex;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+.food-description-back {
+  margin-left: 1rem;
+}
+
+.food-description-buy {
+  margin-right: 1rem;
+  display: inline;
+  margin-left: 80.5%;
+}
+
+.food-description-money-icon {
+  margin-left: 45%;
+  margin-bottom: -0.5rem;
+}
+
+.food-description-price {
+  display: inline;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  color: #292B2E;
+}
+
+.cancel-purchase {
+  margin-left: 1rem;
+}
+
+.confirm-purchase {
+  display: inline;
+  margin-left: 66%;
+  margin-right: 1rem;
+}
+
+#directionsModal {
+  padding-top: 10%;
+  display: none; 
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+#feed-directions {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  color: #292B2E;
+}
+
 /* TUTORIAL MODALS --------- */
 /* TUTORIAL 1 */
 .tutorial-modal {
@@ -320,18 +407,17 @@ img.bg {
   top: 0;
   width: 100%; 
   height: 100%; 
-  overflow: auto; 
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.8); 
 }
 
 .tutorial-modal-content {
   background-color: #FFF9E6;
-  margin: 12% auto; 
-  padding: 20px;
+  margin: 8% auto; 
   border: 1px solid #888;
-  width: 40%; 
+  width: 50%; 
   border-radius: 1rem;  
+  padding: 2% 0;
 }
 
 .tutorial-modal h1 {
@@ -455,7 +541,7 @@ img.bg {
 }
 
 .skip-link {
-  margin: auto;
+  margin-top: 20%;
 }
 
 .next-button {
@@ -481,9 +567,7 @@ img.bg {
   display: grid;
   margin: auto;
   grid-template-columns: 15% 85%;
-  overflow: hidden;
   margin-top: 4rem;
-  margin-bottom: 1rem;
 }
 
 .tutorial3-grid-captions {
@@ -493,16 +577,224 @@ img.bg {
 }
 
 .tutorial3-body h4 {
-  font-family: "srproj";
+  font-family: 'Srprojfont-Regular';
   font-size: 1.3rem;
   font-weight: bold;
   color: #FFFFFF;
   background-color: #292B2E;
   border: none;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
   margin-left: 0.3rem;
   margin-right: 0.3rem;
   text-align: center;
   border-radius: 0.5rem;
+}
+
+/* SETTINGS MODAL */
+.settings-modal-content {
+  background-color: #FFF9E6;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 1rem;
+  width: 50%;
+  margin-left: auto;
+  margin-right: 5rem;
+  margin-top: 8%; 
+  margin-bottom: 5%;
+  padding: 20px; 
+}
+
+.settings-buttons {
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: bold;
+  color: #292B2E;
+  text-transform: uppercase;
+  background-color: #FBE7D5;
+  letter-spacing: 0.25rem;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1rem 0.7rem 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.delete-account {
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background-color: #292B2E;
+  letter-spacing: 0.25rem;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1rem 0.7rem 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 15rem;
+  width: 100%;
+}
+
+/* CODE MODAL */
+.code-modal-content {
+  background-color: #FFF9E6;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 1rem;
+  width: 50%;
+  margin-left: auto;
+  margin-right: 5rem;
+  margin-top: 8%; 
+  margin-bottom: 5%;
+  padding: 20px; 
+}
+
+.lessons-grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: center;
+  background-color: #FBE7D5;
+  border-radius: 0.5rem;
+  margin: 1.5rem;
+}
+
+.lesson-item {
+  display: grid;
+  grid-template-rows: 3rem 3rem 4rem;
+  background-color: #FFF9F4;
+  margin: 0.75rem;
+  border-radius: 1rem;
+  color: #292B2E;
+  padding: 0rem 2rem 1rem 1rem;
+} 
+
+.code-modal-content p {
+    font-family: 'SF Pro Display';
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: #292B2E;
+}
+
+.code-modal-content h3 {
+  font-family: 'Srprojfont-Regular';
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.settings-buttons {
+  cursor: pointer;
+}
+
+/* JAVASCRIPT */
+.javascript-modal-content {
+  background-color: #FFF9E6;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 1rem;
+  width: 85%;
+  margin-left: auto;
+  margin-right: 5rem;
+  margin-top: 8%; 
+  margin-bottom: 5%;
+  padding: 20px; 
+}
+
+.js-lesson-item {
+  background-color: #FBE7D5;
+  margin: 2rem;
+  border-radius: 1rem;
+  color: #292B2E;
+  padding: 0rem 1.5rem 1.5rem 1.5rem;
+}
+
+.js-lesson-header {
+  display: grid;
+  grid-template-columns: 85% 15%;
+}
+
+.js-lesson-sections {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.javascript-modal-content h3 {
+  font-family: 'Srprojfont-Regular';
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.javascript-modal-content p {
+  font-family: 'SF Pro Display';
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: #292B2E;
+}
+
+.start-lesson {
+  font-family: 'Srprojfont-Regular';
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #292B2E;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* IDE CONTENT */
+
+.ide-modal-content {
+  background-color: #FFF9E6;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 1rem;
+  width: 85%;
+  height: 68%;
+  margin-left: auto;
+  margin-right: 5rem;
+  margin-top: 8%; 
+  margin-bottom: 5%;
+  padding: 20px; 
+}
+
+.ide {
+  overflow-y: scroll;
+  height: 70%;
+}
+
+.ide-description {
+  font-family: 'SF Pro Display';
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: #292B2E;
+  margin-bottom: 2rem;
+  margin-left: 1.7rem;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

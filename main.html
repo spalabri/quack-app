@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <img src="images/white-bg.jpg" class="bg">
+        <img src="img/white-bg.png" class="bg">
         <div class="header">
             <a class="user-name">Fiona's Friend</a>
             <a href="#default" class="pet-name">mochiko</a>
@@ -80,16 +80,10 @@
                     <div id="tutorial3" class="tutorial-content">
                         <div class="tutorial3-grid">
                             <div class="tutorial3-grid-captions">
-                                <h3>Here's <b>where you can maintain Mochiko's meters</b> shown above.</h3>
+                                <h3>Here's where you can <b>maintain Mochiko's meters</b></h3>
                                 <br>
                             </div>
                             <div class="grid-item tutorial3-body">
-                                <div class="body-button">
-                                    <h4>home</h4>
-                                </div>
-                                <div class="body-text">
-                                    <p>This takes you back to your home screen.</p>
-                                </div>
                                 <div class="body-button">
                                     <h4>shop</h4>                
                                 </div>
@@ -107,12 +101,6 @@
                                 </div>
                                 <div class="body-text">
                                     <p>Have your friend sleep while you're away.</p>
-                                </div>
-                                <div class="body-button">
-                                    <h4>connect</h4>
-                                </div>
-                                <div class="body-text">
-                                    <p>Connect with friends to code with them and send them gifts.</p>
                                 </div>
                             </div>
                             <div class="grid-item back-button">
@@ -139,83 +127,325 @@
                 </div>
             </div>
         </div>
-        <!-- SLEEP MODAL -->
-        <div id="sleepModal" class="modal">
-            <div class="modal-content">
-                <img src="images/sleep.png" class="modal-img">
-                <p class="modal-heading">It's important to take care of yourself too.</p>
-                <p class="modal-text">When you're back, Mochiko willl have more energy!</p>
-                <button type="button" class="close nav-button" onclick="wake()">Wake up</button>
-            </div>
-        </div>
         <!-- SHOP MODAL -->
         <div id="shopModal" class="nav-modal">
             <div class="shop-modal-content">
                 <button type="button" class="nav-close nav-button" onclick="exitShop()">x</button>
-                <h1>shop</h1>
-                <div class="tab-div">
-                    <!-- Tab links -->
-                    <div class="tab">
-                        <button class="tablinks" onclick="openTab(event, 'food')" id="defaultOpen">food</button>
-                        <button class="tablinks" onclick="openTab(event, 'accessories')">accessories</button>
-                        <button class="tablinks" onclick="openTab(event, 'furniture')">furniture</button>
+                <div class="shop-div">
+                    <!--MAIN MENU -->
+                    <div id="shop-grid" class="shop-content">
+                        <h1>shop</h1>
+                        <div class="tab-div">
+                            <!-- Tab links -->
+                            <div class="tab">
+                                <button class="tablinks" onclick="openTab(event, 'food')" id="defaultOpen">food</button>
+                                <button class="tablinks" onclick="openTab(event, 'accessories')">accessories</button>
+                                <button class="tablinks" onclick="openTab(event, 'furniture')">furniture</button>
+                            </div>
+                            <!-- Food Tab Content -->
+                            <div id="food" class="tab-content">
+                                <div class="item-grid">
+                                    <div class="item" onclick="changeShopContent(event, 'lechon', '125')">
+                                        <div class="item-image">
+                                            <img src="img/lechon.png">
+                                        </div>
+                                        <h3>lechon</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>125</p>
+                                    </div>
+                                    <div class="item" onclick="changeShopContent(event, 'fufu', '150')">
+                                        <div class="item-image">
+                                            <img src="img/fufu-egusi.png">
+                                        </div>
+                                        <h3>fufu and egusi</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>150</p>
+                                    </div>
+                                    <div class="item" onclick="changeShopContent(event, 'calzone', '100')">
+                                        <div class="item-image">
+                                            <img src="img/calzone.png">
+                                        </div>
+                                        <h3>calzone</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>100</p>
+                                    </div>
+                                    <div class="item" onclick="changeShopContent(event, 'sushi', '20')">
+                                        <div class="item-image">
+                                            <img src="img/sushi.png">
+                                        </div>
+                                        <h3>sushi</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>20</p>
+                                    </div>
+                                    <div class="item" onclick="changeShopContent(event, 'tteokbokki', '100')">
+                                        <div class="item-image">
+                                            <img src="img/tteokbokki.png">
+                                        </div>
+                                        <h3>tteokbokki</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>100</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accessories Tab Content -->
+                            <div id="accessories" class="tab-content">
+                                <div class="item-grid">
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="img/mustache.png">
+                                        </div>
+                                        <h3>mustache</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>30</p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="img/hat.png">
+                                        </div>
+                                        <h3>hat</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>80</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Furniture Tab Content -->
+                            <div id="furniture" class="tab-content">
+                                <div class="item-grid">
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="img/mexican-blanket.png">
+                                        </div>
+                                        <h3>serape</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>125</p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="img/plant.png">
+                                        </div>
+                                        <h3>plant</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>150</p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="img/filipino-wooden-spork.png">
+                                        </div>
+                                        <h3>filipino decor</h3>
+                                        <img class="money-bag" src="img/money.png">
+                                        <p>100</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Tab content -->
-                    <div id="food" class="tab-content">
-                        <div class="food-grid">
-                            <div class="food-item">
-                                <div class="food-image">
-                                    <img src="img/lechon.png">
-                                </div>
-                                <h3>lechon</h3>
-                                <img class="money-bag" src="img/money.png">
-                                <p>125</p>
-                            </div>
-                            <div class="food-item">
-                                <div class="food-image">
-                                    <img src="img/fufu-egusi.png">
-                                </div>
-                                <h3>fufu and egusi</h3>
-                                <img class="money-bag" src="img/money.png">
-                                <p>125</p>
-                            </div>
-                            <div class="food-item">
-                                <div class="food-image">
-                                    <img src="img/calzone.png">
-                                </div>
-                                <h3>calzone</h3>
-                                <img class="money-bag" src="img/money.png">
-                                <p>125</p>
-                            </div>
-                            <div class="food-item">
-                                <div class="food-image">
-                                    <img src="img/sushi.png">
-                                </div>
-                                <h3>sushi</h3>
-                                <img class="money-bag" src="img/money.png">
-                                <p>125</p>
-                            </div>
-                            <div class="food-item">
-                                <div class="food-image">
-                                    <img src="img/tteokbokki.png">
-                                </div>
-                                <h3>tteokbokki</h3>
-                                <img class="money-bag" src="img/money.png">
-                                <p>125</p>
-                            </div>
+                    <!--ITEM DESCRIPTIONS-->
+                    <div id="lechon" class="shop-content food-descriptions">
+                        <p class="food-description-heading">lechon</p>
+                        <img class="food-description-img" src="img/lechon.png">
+                        <img class="food-description-money-icon" src="img/money.png">
+                        <p class="food-description-price"></p>
+                        <p class="food-description-text">Lechon, derived from a Spanish word for roasted suckling pig is one of the most popular 
+                            dishes in the Philippines. The slowly-roasted suckling pig is usually stuffed with lemongrass, tamarind, garlic, onions, and chives, 
+                            and is then roasted on a large bamboo spit over an open fire.</p>
+                        <button class="food-description-back" onclick="shopDefault()">back</button>
+                        <button class="food-description-buy" onclick="purchaseModal('lechon', '125')">buy</button>
+                    </div>
+                    <div id="fufu" class="shop-content food-descriptions">
+                        <p class="food-description-heading">fufu and egusi</p>
+                        <img class="food-description-img" src="img/fufu-egusi.png">
+                        <img class="food-description-money-icon" src="img/money.png">
+                        <p class="food-description-price"></p>
+                        <p class="food-description-text">Fufu (or fufuo, foofoo, foufou) is a dough-like food found in West African cuisine. 
+                            It is often made in the traditional Ghanaian, Ivorian, Liberian, and Cuban method of separately mixing and pounding equal portions 
+                            of boiled cassava with green plantain or cocoyam, or by mixing cassava/plantains or cocoyam flour with water and stirring it on a stove.
+                        </p>
+                        <button class="food-description-back" onclick="shopDefault()">back</button>
+                        <button class="food-description-buy" onclick="purchaseModal('fufu', '150')">buy</button>
+                    </div>
+                    <div id="calzone" class="shop-content food-descriptions">
+                        <p class="food-description-heading">calzone</p>
+                        <img class="food-description-img" src="img/calzone.png">
+                        <img class="food-description-money-icon" src="img/money.png">
+                        <p class="food-description-price"></p>
+                        <p class="food-description-text">A calzone is an Italian oven-baked folded pizza, often described as a turnover, made with leavened dough. 
+                            It originated in Naples in the 18th century. A typical calzone is made from salted bread dough, baked in an oven and is stuffed with salami, 
+                            ham or vegetables, mozzarella, ricotta and Parmesan or pecorino cheese, as well as an egg.</p>
+                        <button class="food-description-back" onclick="shopDefault()">back</button>
+                        <button class="food-description-buy" onclick="purchaseModal('calzone', '100')">buy</button>
+                    </div>
+                    <div id="sushi" class="shop-content food-descriptions">
+                        <p class="food-description-heading">sushi</p>
+                        <img class="food-description-img" src="img/sushi.png">
+                        <img class="food-description-money-icon" src="img/money.png">
+                        <p class="food-description-price"></p>
+                        <p class="food-description-text">Sushi is a Japanese dish of prepared vinegared rice (鮨飯, sushi-meshi), usually with some sugar and salt, 
+                            accompanied by a variety of ingredients (ねた, neta), such as seafood, often raw, and vegetables. </p>
+                        <button class="food-description-back" onclick="shopDefault()">back</button>
+                        <button class="food-description-buy" onclick="purchaseModal('sushi', '20')">buy</button>
+                    </div>
+                    <div id="tteokbokki" class="shop-content food-descriptions">
+                        <p class="food-description-heading">tteokbokki</p>
+                        <img class="food-description-img" src="img/tteokbokki.png">
+                        <img class="food-description-money-icon" src="img/money.png">
+                        <p class="food-description-price"></p>
+                        <p class="food-description-text">Tteokbokki (떡볶이), or simmered rice cake, is a popular Korean food made from small-sized garae-tteok (long, 
+                            white, cylinder-shaped rice cakes) called tteokmyeon (떡면; "rice cake noodles") or commonly tteokbokki-tteok (떡볶이 떡; "tteokbokki rice cakes").
+                             Eomuk (fish cakes), boiled eggs, and scallions are some common ingredients paired with tteokbokki in dishes. </p>
+                        <button class="food-description-back" onclick="shopDefault()">back</button>
+                        <button class="food-description-buy" onclick="purchaseModal('tteokbokki', '100')">buy</button>
+                    </div>
+                </div>
+                <!--PURCHASE MODAL-->
+                <div id="buyModal" class="modal">
+                    <div class="modal-content">
+                        <p class="modal-heading">are you sure?</p>
+                        <p id="item-name" class="modal-text"></p>
+                        <button class="cancel-purchase" onclick="exitPurchaseModal()">cancel</button>
+                        <button class="confirm-purchase" onclick="feed()">confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--DIRECTIONS-->
+        <div id="directionsModal">
+            <p id="feed-directions"></p>
+        </div>
+        <!-- CODE MODAL -->
+        <div id="codeModal" class="nav-modal">
+            <div class="code-modal-content">
+                <button type="button" class="nav-close nav-button" onclick="exitCode()">x</button>
+                <h1>code</h1>
+                <div class="lessons-grid">
+                    <div class="lesson-item" onclick="openJavascript()">
+                        <h3>javascript</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>java</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>html</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>css</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>python</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <h3>c</h3>
+                        <p>25 lessons</p>
+                        <div class="lesson-progress">
+                            <p>25%</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- JAVASCRIPT CONTENT -->
+        <div id="javascriptModal" class="nav-modal">
+            <div class="javascript-modal-content">
+                <button type="button" class="nav-close nav-button" onclick="closeJavascript()">back</button>
+                <h1>javascript</h1>
+                <div class="js-lesson-item">
+                    <div class="js-lesson-header">
+                        <h3>introduction</h3>
+                        <button class="start-lesson" onclick="openIdeModal()">start lesson</button>
+                    </div>
+                    <div class="js-lesson-sections">
+                        <p>What is JavaScript?</p>
+                        <p>Developer Console</p>
+                        <p>Manuals and Specifications</p>
+                        <p>Code Editors</p>
+                    </div>
+                </div>
+                <div class="js-lesson-item">
+                    <div class="js-lesson-header">
+                        <h3>javascript foundations</h3>
+                        <button class="start-lesson">start lesson</button>
+                    </div>
+                    <div class="js-lesson-sections">
+                        <p>Hello, World!</p>
+                        <p>Interaction</p>
+                        <p>Comparisons</p>
+                        <p>Code Structure</p>
+                        <p>Type Conversion</p>
+                        <p>Conditional Branching</p>
+                    </div>
+                </div> 
+            </div>           
+        </div>
+        <!-- IDE CONTENT -->
+        <div id="ideModal" class="nav-modal">
+            <div class="ide-modal-content">
+                <button type="button" class="nav-close nav-button" onclick="closeIdeModal()">back</button>
+                <h1>Insert title of content</h1>
+                <p class="ide-description">Insert description of what the user should code.</p>
+                <div class="ide">
+                <!-- It will create a division for 
+                    compiler and embed that into 
+                    web page-->
+                <div data-pym-src=
+                "https://www.jdoodle.com/embed/v0/4Nni">
+                    </div>
+                
+                    <!-- This script tag contains the 
+                        javascript code in the written URL -->
+                    <script src=
+                "https://www.jdoodle.com/assets/jdoodle-pym.min.js"
+                        type="text/javascript">
+                    </script>
+                </div>
+            </div>           
+        </div>
+        <!-- SLEEP MODAL -->
+        <div id="sleepModal" class="modal">
+            <div class="modal-content">
+                <img src="img/sleep.png" class="modal-img">
+                <p class="modal-heading">It's important to take care of yourself too.</p>
+                <p class="modal-text">When you're back, Mochiko willl have more energy!</p>
+                <button type="button" class="close nav-button" onclick="wake()">Wake up</button>
+            </div>
+        </div>
+        <!-- SETTINGS MODAL -->
+        <div id="settingsModal" class="nav-modal">
+            <div class="settings-modal-content">
+                <button type="button" class="nav-close nav-button" onclick="exitSettings()">x</button>
+                <h1>settings</h1>
+                <button class="settings-buttons">update friend name</button>
+                <br>
+                <button class="settings-buttons" onclick="restartTutorial()">restart tutorial</button>
+                <br>
+                <button class="delete-account">delete account</button>
+            </div>
+        </div>
         <!-- FOOTER -->
         <div class="footer">
             <p class="disclaimer">Your browser window is too small. Please resize.</p>
-            <button type="button" class="nav-button">home</button>
             <button type="button" class="nav-button" id="shopButton" onclick="shop()">shop</button>
-            <button type="button" class="nav-button">code</button>
+            <button type="button" class="nav-button" onclick="code()">code</button>
             <button type="button" class="nav-button" id="sleepButton" onclick="sleep()">sleep</button>
-            <button type="button" class="nav-button"onclick="foodCursor()">feed</button>
+            <button type="button" class="nav-button" onclick="settings()">settings</button>
         </div>
         <canvas id="canvas1" onclick="defaultCursor()"></canvas>
         <script src="main.js"></script>
