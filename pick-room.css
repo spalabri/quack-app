@@ -25,7 +25,15 @@ h1 {
 
 img {
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 1rem; 
+}
+
+img:hover { 
+    border: 3px solid black; 
+  } 
+
+#confirm {
+    opacity: 0.4;
 }
 
 .grid-item {

@@ -1,3 +1,16 @@
+//displays alerts of locally stored user name & pet name at every html page linked 
+var u1 = localStorage.getItem("user-fname");
+var p1 = localStorage.getItem("pet-name");
+var b1 = localStorage.getItem("user-bg");
+// chose getElementsByClassName since it's a class in the main.html
+fnameElems = document.getElementsByClassName("user-name");
+for (let i = 0; i < fnameElems.length; i++) fnameElems[i].innerHTML = u1 +"'s Friend";
+pnameElems = document.getElementsByClassName("pet-name");
+for (let i = 0; i < pnameElems.length; i++) pnameElems[i].innerHTML = p1.toLowerCase();
+// change the background img for main.html
+document.getElementById("bg").src= b1;
+
+
 // To check name to see if it only contains upper and lowercase letters
 function checkName(name) {
     if (name.value.length == 0){
@@ -20,16 +33,20 @@ function checkName(name) {
 }
 
 // To check a email to see if it matches anystring@anystring.anystring
-const validateEmail = (email) => {
+function validateEmail(email) {
     return String(email)
       .toLowerCase()
       .match(
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
-  };
+}
 
 // To change input outline based on whether email is valid
 function checkEmail(address) {
+    // alert(address.value);
+    // alert(address.value.length);
+    // var validEm = validateEmail(address.value); 
+    // alert(validEm);
     if (address.value.length == 0){
         address.style.outlineColor = "black";
         errorMsg("none", address);
@@ -37,9 +54,10 @@ function checkEmail(address) {
         return false;
     }
     else if (validateEmail(address.value)) {
+
         address.style.outlineColor = "#39FF13";
         errorMsg("none", address);
-        return false;
+        return true;
     }     
     else {
         address.style.outlineColor = "red";
@@ -93,58 +111,66 @@ function matchPassword(inPaswd) {
     }
 }
 
+// To get the user info & set local variable for their name to pass to html pages
 function getInfo() {
     const first = document.getElementById('fname').value;
     const last = document.getElementById('lname').value;
     const email = document.getElementById('email').value;
     const p1 = document.getElementById('pw1').value;
     const p2 = document.getElementById('pw2').value;
-  }
+    localStorage.setItem("user-fname", first);
+    window.location.href="name-friend.html";
+}
 
+// To get the pet name & set local variable for their name to pass to html pages
 function getFriendName() {
     const friend = document.getElementById('friendname').value;
+    localStorage.setItem("pet-name", friend);
 }
 
 // To check if all inputs in form have been filled in
 function checkform() {
-    var form = document.getElementById("signup").elements;
-    var cansubmit = true;
-    for (var i = 0; i < form.length; i++) {
-        if (form[i].value.length == 0 && form[i].nodeName != "BUTTON"){
-            cansubmit = false;
-        }
-    }
-    if (cansubmit){
-        document.getElementById('confirm').disabled = false;
+    var first = document.getElementById('fname');
+    var last = document.getElementById('lname');
+    var email = document.getElementById('email');
+    var p1 = document.getElementById('pw1');
+    var p2 = document.getElementById('pw2');
+    if (checkName(first) && checkName(last) && checkEmail(email) && checkPassword(p1) && matchPassword(p2)){
         btnEnable(true);
     }
     else{
-        document.getElementById('confirm').disabled = true;
+        btnEnable(false);
     }
 }
 
-// Displays error message depending on the error made
+// To check if pet name is valid & enable/disable accordingly
+function checkPetName() {
+    var pet = document.getElementById('friendname');
+    if (checkName(pet)){
+        btnEnable(true);
+    }
+    else{
+        btnEnable(false);
+    }
+}
+
+// to diplay error message depending on the error made
 function errorMsg(type, field) {
-    var valid = true;
     errorBox = field.id + "Error";
     error = document.getElementById(errorBox);
     if (type == "name") {
-      valid = false;
       field.classList.add("err");
       error.innerHTML = "Name must be only characters\r\n";
     } 
     else if (type == "email") {
-        valid = false;
         field.classList.add("err");
         error.innerHTML = "Please provide a valid email\r\n";
     }
     else if (type == "pw1") {
-        valid = false;
         field.classList.add("err");
         error.innerHTML = "Must be between 7 to 15 characters\r\n";
     }
     else if (type == "pw2") {
-        valid = false;
         field.classList.add("err");
         error.innerHTML = "Passwords must match\r\n";
     } 
@@ -152,20 +178,65 @@ function errorMsg(type, field) {
         field.classList.remove("err");
         error.innerHTML = "";
     }
-    return valid;
   }
 
-// Changes css to give disable or enable look to button
-// currently not working as intended
+// to change css & enable/disable button
 function btnEnable(enable) {
-    // const btn = document.getElementById("confirm");
     if (enable){
-        document.getElementsByClassName("confirm-button").style.opacity = 1;
-        // document.getElementById("confirm").style.color = "green";
-        // document.getElementById('confirm').style.filter = "1";
+        document.getElementById('confirm').disabled = false;
+        document.getElementById('confirm').style.opacity = "1";
     }
     else{
-        document.getElementsByClassName("confirm-button").style.opacity = 0.4;
-        // document.getElementById('confirm').style.filter = "alpha(opacity=40)";
+        document.getElementById('confirm').disabled = true;
+        document.getElementById('confirm').style.opacity = "0.4";
     }
+}
+
+// returns index of chosen img in img-bg class
+function bgIdx(){
+    var chosenIdx = -1;
+    var bgOptions = document.getElementsByClassName("img-bg");
+    for(var i = 0; i < bgOptions.length; i++){
+        // asking if another img has been selected if so then true
+        if (bgOptions[i].id == "selected"){
+            chosenIdx = i;
+        }
+    }
+    return chosenIdx;
+}
+
+// highlights chosen bg & enables/disables button based on selection 
+function checkBg(bgImg){
+    var imgIdx = bgIdx();
+    var bgOptions = document.getElementsByClassName("img-bg");
+    // unselect previously selected bg img
+    if (bgOptions[imgIdx]== bgImg) {
+        bgImg.setAttribute("id", "");
+        bgImg.style.border = "";
+        btnEnable(false);
+    }
+    // select new bg img
+    else if (imgIdx == -1){
+        bgImg.setAttribute("id", "selected");
+        bgImg.style.border = "3px solid #39FF13";
+        btnEnable(true);
+    }
+    //switch bg imgs
+    else{
+        bgOptions[imgIdx].setAttribute("id", "");
+        bgOptions[imgIdx].style.border = "";
+        bgImg.setAttribute("id", "selected");
+        bgImg.style.border = "3px solid #39FF13";
+        btnEnable(true);
+    }
+}
+
+// displays src of room chosen after confirmation
+function getRoom(){
+    var chosenIdx = bgIdx();
+    var bgOptions = document.getElementsByClassName("img-bg");
+    var bgAddress = bgOptions[chosenIdx].src; 
+    var chosenBgAdress = bgAddress.substring(bgAddress.indexOf("quack-app/") + 10);
+    localStorage.setItem("user-bg", chosenBgAdress);
+    
 }

@@ -9,11 +9,88 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <img src="img/white-bg.png" class="bg">
-        <div class="header">
+        <img src="img/white-bg.png" id="bg" class="bg">
+        <div class="header-grid">
+            <div class="header-info">
+                <div class="header">
+                    <a class="user-name">Fiona's Friend</a>
+                    <a href="#default" class="pet-name">mochiko</a>
+                </div>
+            </div>
+            <div class="header-info">
+                <div class="status-container">
+                    <div class="img-container">
+                        <img class="status-img" src="img/heart.png" alt="heart health">
+                    </div>
+                <div class="bar-container">
+                    <div id="heart" class="bar">
+                        <div class="status one"></div>
+                        <div class="status two"></div>
+                        <div class="status three"></div>
+                        <div class="status four"></div>
+                        <div class="status five"></div>
+                        <div class="status six"></div>
+                        <div class="status seven"></div>
+                        <div class="status eight"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="header-info">
+                <div class="status-container">
+                    <div class="img-container">
+                        <img class="status-img" src="img/calzone.png" alt="food health">
+                    </div>
+                <div class="bar-container">
+                    <div id="diet" class="bar">
+                        <div class="status one"></div>
+                        <div class="status two"></div>
+                        <div class="status three"></div>
+                        <div class="status four"></div>
+                        <div class="status five"></div>
+                        <div class="status six"></div>
+                        <div class="status seven"></div>
+                        <div class="status eight"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="header-info">
+                <div class="status-container">
+                    <div class="img-container">
+                        <img class="status-img" src="img/sleep.png" alt="sleep health">
+                    </div>
+                <div class="bar-container">
+                    <div id="rest" class="bar">
+                        <div class="status one"></div>
+                        <div class="status two"></div>
+                        <div class="status three"></div>
+                        <div class="status four"></div>
+                        <div class="status five"></div>
+                        <div class="status six"></div>
+                        <div class="status seven"></div>
+                        <div class="status eight"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="header-info">
+                <div class="status-container">
+                    <div class="img-container">
+                        <img class="status-img" src="img/money.png" alt="heart health">
+                    </div>
+                <div class="bar-container">
+                    <div class="bar">
+                        1250
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="header">
             <a class="user-name">Fiona's Friend</a>
             <a href="#default" class="pet-name">mochiko</a>
-        </div>
+        </div> -->
         <!--TUTORIAL MODAL-->
         <div id="tutorialModal" class="tutorial-modal">
             <div class="tutorial-modal-content">
@@ -449,6 +526,7 @@
         </div>
         <canvas id="canvas1" onclick="defaultCursor()"></canvas>
         <script src="main.js"></script>
+        <script src="create-account.js"></script>
         <script src="shop.js"></script>
     </body>
 </html>

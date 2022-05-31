@@ -13,6 +13,58 @@ let positionY = 120;
 let gameFrame = 0;
 const staggerFrames = 15;
 var id = null;
+setInterval( function() { update("heart"); }, 3000 );
+setInterval( function() { update("diet"); }, 6000 );
+setInterval( function() { update("rest"); }, 9000 );
+
+function update(health) {  
+  switch(health){
+    case "heart":
+      var status = document.getElementById("heart").getElementsByClassName("status");
+      break;
+    case "diet":
+      var status = document.getElementById("diet").getElementsByClassName("status");
+      break;
+    case "rest":
+      var status = document.getElementById("rest").getElementsByClassName("status");
+      break;
+  }
+  for (var i= status.length - 1; i >= 0; i--){
+      if (status[i].id == ""){
+          status[i].setAttribute("id","empty");
+          status[i].style.backgroundColor = "#292B2E";
+          break;
+      }
+  }
+}
+
+function heal(health){
+  switch(health){
+    case "heart":
+      var status = document.getElementById("heart").getElementsByClassName("status");
+      break;
+    case "diet":
+      var status = document.getElementById("diet").getElementsByClassName("status");
+      break;
+    case "rest":
+      var status = document.getElementById("rest").getElementsByClassName("status");
+      break;
+  }
+    var fill = false;
+    var status = document.getElementsByClassName("status");
+    for (var i= status.length - 1; i >= 0; i--){
+        if (status[i].id == ""){
+            fill = true;
+            status[i+1].setAttribute("id","");
+            status[i+1].style.backgroundColor = "#D3DE92";
+            break;
+        }
+    }
+    if (!fill){
+        status[0].setAttribute("id","");
+        status[0].style.backgroundColor = "#D3DE92";
+    }
+}
 
 function animate() {
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
