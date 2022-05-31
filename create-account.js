@@ -43,10 +43,6 @@ function validateEmail(email) {
 
 // To change input outline based on whether email is valid
 function checkEmail(address) {
-    // alert(address.value);
-    // alert(address.value.length);
-    // var validEm = validateEmail(address.value); 
-    // alert(validEm);
     if (address.value.length == 0){
         address.style.outlineColor = "black";
         errorMsg("none", address);
@@ -197,7 +193,6 @@ function bgIdx(){
     var chosenIdx = -1;
     var bgOptions = document.getElementsByClassName("img-bg");
     for(var i = 0; i < bgOptions.length; i++){
-        // asking if another img has been selected if so then true
         if (bgOptions[i].id == "selected"){
             chosenIdx = i;
         }
