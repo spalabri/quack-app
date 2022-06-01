@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Srprojfont-Regular';
-    src: url('fonts/Srprojfont-Regular.eot');
-    src: url('fonts/Srprojfont-Regular.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Srprojfont-Regular.woff') format('woff'),
-         url('fonts/Srprojfont-Regular.ttf') format('truetype'),
-         url('fonts/Srprojfont-Regular.svg#rsuregular') format('svg');
+    src: url('Srprojfont-Regular.eot');
+    src: url('Srprojfont-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Srprojfont-Regular.woff') format('woff'),
+         url('Srprojfont-Regular.ttf') format('truetype'),
+         url('Srprojfont-Regular.svg#rsuregular') format('svg');
 }
 
 body {

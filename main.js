@@ -234,12 +234,11 @@ function updateMoney(){
 }
 
 function feed() {
-  updateMoney();
-  heal("diet");
   canvas.style.transform = "translate(-50%, -50%)";
   buyModal.style.display = "none";
   shopModal.style.display = "none";
   cursorItem = assignCursor(cursorItem);
+  updateMoney();
 }
 
 function assignCursor(item) {
@@ -274,6 +273,7 @@ function defaultCursor() {
   var body = document.body;
   body.style.cursor = "default";
   document.getElementById('directionsModal').style.display = "none";
+  heal("diet");
 }
 
 function openJavascript() {
