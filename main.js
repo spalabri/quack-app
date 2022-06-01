@@ -13,9 +13,12 @@ let positionY = 120;
 let gameFrame = 0;
 const staggerFrames = 15;
 var id = null;
-setInterval( function() { update("heart"); }, 3000 );
-setInterval( function() { update("diet"); }, 6000 );
-setInterval( function() { update("rest"); }, 9000 );
+// after 30s
+setInterval( function() { update("heart"); }, 30000 );
+// after 60s 
+setInterval( function() { update("diet"); }, 60000 );
+// after 90s
+setInterval( function() { update("rest"); }, 90000 );
 
 function update(health) {  
   switch(health){
@@ -51,7 +54,6 @@ function heal(health){
       break;
   }
     var fill = false;
-    var status = document.getElementsByClassName("status");
     for (var i= status.length - 1; i >= 0; i--){
         if (status[i].id == ""){
             fill = true;
@@ -223,7 +225,17 @@ function exitPurchaseModal() {
   buyModal.style.display = "none";
 }
 
+function updateMoney(){
+  var confirmMsg = document.getElementById("item-name").innerHTML;
+  var price = confirmMsg.substring(confirmMsg.length - 3);
+  var total = document.getElementById("money").textContent;
+  var diff = parseInt(total) - parseInt(price);
+  document.getElementById("money").textContent= diff;
+}
+
 function feed() {
+  updateMoney();
+  heal("diet");
   canvas.style.transform = "translate(-50%, -50%)";
   buyModal.style.display = "none";
   shopModal.style.display = "none";
