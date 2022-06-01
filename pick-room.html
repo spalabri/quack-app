@@ -10,31 +10,31 @@
     </head>
     <body>
         <h1>pick your room</h1>
-        <form action="pick-room.html" method="post" id="signup"> 
+        <form action="main.html" method="post" id="signup"> 
             <div class="room-grid">
                 <div class="grid-item">
-                    <img src="img/white-bg.png">
+                    <img class="img-bg" onclick="checkBg(this)" src="img/white-bg.png">
                 </div>
                 <div class="grid-item">
-                    <img src="img/blue-bg.png">
+                    <img class="img-bg" onclick="checkBg(this)" src="img/blue-bg.png">
                 </div>
                 <div class="grid-item">
-                    <img src="img/pink-bg.png">
+                    <img class="img-bg" onclick="checkBg(this)" src="img/pink-bg.png">
                 </div>  
                 <div class="grid-item">
-                    <img src="img/purple-bg.png">
+                    <img class="img-bg" onclick="checkBg(this)" src="img/purple-bg.png">
                 </div>
                 <div class="grid-item">
-                    <img src="img/yellow-bg.png">
+                    <img class="img-bg" onclick="checkBg(this)" src="img/yellow-bg.png">
                 </div>
                 <div class="grid-item">
-                    <img src="img/green-bg.png">
+                    <img class="img-bg" onclick="checkBg(this)" src="img/green-bg.png">
                 </div>
                 <div class="grid-item play-button">
-                    <button type="submit" class="full">let's play!</button>
+                    <button onclick="getRoom()" type="submit" class="full" id="confirm" disabled="disabled">let's play!</button>
                 </div>
             </div>
         </form>
-        <!-- <script src="js/create-account.js"></script> -->
+        <script src="create-account.js"></script>
     </body>
 </html>

@@ -13,6 +13,60 @@ let positionY = 120;
 let gameFrame = 0;
 const staggerFrames = 15;
 var id = null;
+// after 30s
+setInterval( function() { update("heart"); }, 30000 );
+// after 60s 
+setInterval( function() { update("diet"); }, 60000 );
+// after 90s
+setInterval( function() { update("rest"); }, 90000 );
+
+function update(health) {  
+  switch(health){
+    case "heart":
+      var status = document.getElementById("heart").getElementsByClassName("status");
+      break;
+    case "diet":
+      var status = document.getElementById("diet").getElementsByClassName("status");
+      break;
+    case "rest":
+      var status = document.getElementById("rest").getElementsByClassName("status");
+      break;
+  }
+  for (var i= status.length - 1; i >= 0; i--){
+      if (status[i].id == ""){
+          status[i].setAttribute("id","empty");
+          status[i].style.backgroundColor = "#292B2E";
+          break;
+      }
+  }
+}
+
+function heal(health){
+  switch(health){
+    case "heart":
+      var status = document.getElementById("heart").getElementsByClassName("status");
+      break;
+    case "diet":
+      var status = document.getElementById("diet").getElementsByClassName("status");
+      break;
+    case "rest":
+      var status = document.getElementById("rest").getElementsByClassName("status");
+      break;
+  }
+    var fill = false;
+    for (var i= status.length - 1; i >= 0; i--){
+        if (status[i].id == ""){
+            fill = true;
+            status[i+1].setAttribute("id","");
+            status[i+1].style.backgroundColor = "#D3DE92";
+            break;
+        }
+    }
+    if (!fill){
+        status[0].setAttribute("id","");
+        status[0].style.backgroundColor = "#D3DE92";
+    }
+}
 
 function animate() {
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -171,11 +225,20 @@ function exitPurchaseModal() {
   buyModal.style.display = "none";
 }
 
+function updateMoney(){
+  var confirmMsg = document.getElementById("item-name").innerHTML;
+  var price = confirmMsg.substring(confirmMsg.length - 3);
+  var total = document.getElementById("money").textContent;
+  var diff = parseInt(total) - parseInt(price);
+  document.getElementById("money").textContent= diff;
+}
+
 function feed() {
   canvas.style.transform = "translate(-50%, -50%)";
   buyModal.style.display = "none";
   shopModal.style.display = "none";
   cursorItem = assignCursor(cursorItem);
+  updateMoney();
 }
 
 function assignCursor(item) {
@@ -210,6 +273,7 @@ function defaultCursor() {
   var body = document.body;
   body.style.cursor = "default";
   document.getElementById('directionsModal').style.display = "none";
+  heal("diet");
 }
 
 function openJavascript() {

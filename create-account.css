@@ -41,6 +41,9 @@ h1 {
     text-align: center;
 }
 
+#confirm {
+    opacity: 0.4;
+}
 .err { 
     background: #ffe6ee; 
     border: 1px solid #b1395f; 

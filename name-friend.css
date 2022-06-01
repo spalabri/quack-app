@@ -41,7 +41,9 @@ button {
     text-align: center;
     border-radius: 1rem;
 }
-
+#confirm {
+    opacity: 0.4;
+}
 .err { 
     background: #ffe6ee; 
     border: 1px solid #b1395f; 
