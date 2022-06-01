@@ -276,26 +276,26 @@ function defaultCursor() {
   heal("diet");
 }
 
-function openJavascript() {
+function openJava() {
   cancelAnimationFrame(id);
   codeModal.style.display = "none";
-  var javascriptModal = document.getElementById("javascriptModal");
-  javascriptModal.style.display = "block";
+  var javaModal = document.getElementById("javaModal");
+  javaModal.style.display = "block";
 }
 
-function closeJavascript() {
+function closeJava() {
   id = requestAnimationFrame(animate);
-  javascriptModal.style.display = "none";
+  javaModal.style.display = "none";
   codeModal.style.display = "block";
 }
 
 function openIdeModal() {
-  javascriptModal.style.display = "none";
+  javaModal.style.display = "none";
   var ideModal = document.getElementById("ideModal");
   ideModal.style.display = "block";
 }
 
 function closeIdeModal() {
   ideModal.style.display = "none";
-  javascriptModal.style.display = "block";
+  javaModal.style.display = "block";
 }

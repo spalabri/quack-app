@@ -101,7 +101,7 @@
                         <p>digital friend.</p>
                         <br>
                         <p>Let's go through all the ways we</p>
-                        <p>can take care of <b>Mochiko</b>!</p>
+                        <p>can take care of <b>your friend</b>!</p>
                         <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial2')">next</button>
                         <br>
                         <a class="skip-tutorial" onclick="skipTutorial('tutorialModal')">skip tutorial</a>
@@ -109,7 +109,7 @@
                     <div id="tutorial2" class="tutorial-content">
                         <div class="tutorial2-grid">
                             <div class="grid-captions first-caption">
-                                <h3>These meters indicate <b>how Mochiko is doing</b>.</h3>
+                                <h3>These meters indicate <b>how your friend is doing</b>.</h3>
                                 <br>
                             </div>
                             <div class="grid-item tutorial2-body">
@@ -139,7 +139,7 @@
                                 </div>
                             </div>
                             <div class="grid-captions last-caption">
-                                <p>Be careful! If the meters get <b>too low</b>, Mochiko will run away. To. get them back, you'd need to complete extra coding challenges.</p>
+                                <p>Be careful! If the meters get <b>too low</b>, your friend will run away. To. get them back, you'd need to complete extra coding challenges.</p>
                             </div>
                             <div class="grid-item back-button">
                                 <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial1')">back</button>
@@ -155,7 +155,7 @@
                     <div id="tutorial3" class="tutorial-content">
                         <div class="tutorial3-grid">
                             <div class="tutorial3-grid-captions">
-                                <h3>Here's where you can <b>maintain Mochiko's meters</b></h3>
+                                <h3>Here's where you can <b>maintain your friend's meters</b></h3>
                                 <br>
                             </div>
                             <div class="grid-item tutorial3-body">
@@ -392,8 +392,8 @@
                 <button type="button" class="nav-close nav-button" onclick="exitCode()">x</button>
                 <h1>code</h1>
                 <div class="lessons-grid">
-                    <div class="lesson-item" onclick="openJavascript()">
-                        <h3>javascript</h3>
+                    <div class="lesson-item" onclick="openJava()">
+                        <h3>java</h3>
                         <p>25 lessons</p>
                         <div class="lesson-progress">
                             <div class="learning-container">
@@ -405,7 +405,7 @@
                         </div>
                     </div>
                     <div class="lesson-item">
-                        <h3>java</h3>
+                        <h3>javascript</h3>
                         <p>25 lessons</p>
                         <div class="lesson-progress">
                             <div class="learning-container">
@@ -467,51 +467,75 @@
                 </div>
             </div>
         </div>
-        <!-- JAVASCRIPT CONTENT -->
-        <div id="javascriptModal" class="nav-modal">
-            <div class="javascript-modal-content">
-                <button type="button" class="nav-close nav-button" onclick="closeJavascript()">back</button>
-                <h1>javascript</h1>
+        <!-- JAVA CONTENT -->
+        <div id="javaModal" class="nav-modal">
+            <div class="java-modal-content">
+                <button type="button" class="nav-close nav-button" onclick="closeJava()">back</button>
+                <h1>java</h1>
                 <div class="js-lesson-item">
                     <div class="js-lesson-header">
                         <h3>introduction</h3>
                         <button class="start-lesson" onclick="openIdeModal()">start lesson</button>
                     </div>
                     <div class="js-lesson-sections">
-                        <p>What is JavaScript?</p>
-                        <p>Developer Console</p>
-                        <p>Manuals and Specifications</p>
-                        <p>Code Editors</p>
+                        <p>What is Java?</p>
+                        <p>Java Syntax</p>
+                        <p>Java Variables</p>
+                        <p>Java Data Types</p>
                     </div>
                 </div>
                 <div class="js-lesson-item">
                     <div class="js-lesson-header">
-                        <h3>javascript foundations</h3>
+                        <h3>java foundations</h3>
                         <button class="start-lesson">start lesson</button>
                     </div>
                     <div class="js-lesson-sections">
-                        <p>Hello, World!</p>
-                        <p>Interaction</p>
-                        <p>Comparisons</p>
-                        <p>Code Structure</p>
-                        <p>Type Conversion</p>
-                        <p>Conditional Branching</p>
+                        <p>Java Methods</p>
+                        <p>Java Classes</p>
+                        <p>Java File Handling</p>
+                        <p>More Java Examples</p>
                     </div>
-                </div> 
+                </div>
             </div>           
         </div>
         <!-- IDE CONTENT -->
         <div id="ideModal" class="nav-modal">
             <div class="ide-modal-content">
                 <button type="button" class="nav-close nav-button" onclick="closeIdeModal()">back</button>
-                <h1>Insert title of content</h1>
-                <p class="ide-description">Insert description of what the user should code.</p>
+                <h1>Java Variables</h1>
+                <p class="ide-section-title"><b>ASSIGNMENT:</b></p>
+                <p class="ide-description"><b>Let's learn about the different types of Java variables and how to assign values!</b><br />
+                    <br />
+                    There are <b>5 different types of variables</b> in Java:<br />
+                    <br />
+                    String - stores text are surrounded by double quotes - "hello"<br />
+                    int - stores integers / whole numbers without decimals - 123 or -123<br />
+                    float - stores floating point numbers / numbers with decimals - 19.99 or -19.99<br />
+                    char - stores single characters and are surrounded by single quotes - ‘a’ or ‘B’<br />
+                    boolean - stores values with two states - true or false<br />
+                    <br />
+                    <b>When creating a variable, it should look like this:</b><br />
+                    [type] [variableName] = [value];<br />
+                    <br />
+                    <b>So to assign the phrase, “Hello World!” to myVariable it should look like this:</b><br />
+                    String myVariable = “Hello World!”;<br />
+                    <br />
+                    <b>And if we want myVariable to be the decimal “7.52”, it should look like this:</b><br />
+                    float myVariable = 7.52;<br />
+                    <br /><br />
+                    <b>Lesson Directions:</b><br /><br />
+                    Now let's try it!<br /><br />
+                    We’ve declared a variable named myName. Try assigning your full name to myName. After you’ve done that, declare 2 more variables named favoriteNumber and pineapplePizza. 
+                    Try assigning your favorite number to favoriteNumber and either True or False to pineapplePizza 
+                    (depending on whether you think pineapple belongs on pizza or not). Once you're done, scroll down and click the blue <b>"Execute"</b> button. 
+                </p>
+                <p class="ide-section-title"><b>CODING ENVIRONMENT:</b></p>
                 <div class="ide">
                 <!-- It will create a division for 
                     compiler and embed that into 
                     web page-->
                 <div data-pym-src=
-                "https://www.jdoodle.com/embed/v0/4Nni">
+                "https://www.jdoodle.com/embed/v0/4Sxa">
                     </div>
                 
                     <!-- This script tag contains the 

@@ -7,6 +7,18 @@
          url('Srprojfont-Regular.svg#rsuregular') format('svg');
 }
 
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: normal;
+  src: url('sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: bold;
+  src: url('sf-pro-display-cufonfonts/SFPRODISPLAYBOLD.OTF');
+}
+
 body {
     margin: 0;
 }
@@ -80,11 +92,11 @@ img.bg {
 
 .bar-container{
   width: 66%;
-  height: 30%;
+  height: 40%;
   float: left;
 }
 .img-container{
-  height: 60%;
+  height: 70%;
   width: 33%;
   float: left;
   background-color: #292B2E;
@@ -104,7 +116,7 @@ img.bg {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-family: 'Srprojfont-Regular';
+  font-family: 'SF Pro Display';
   font-size: 1rem;
   font-weight: 700;
   color: #FFFFFF;
@@ -797,7 +809,7 @@ img.bg {
 }
 
 /* JAVASCRIPT */
-.javascript-modal-content {
+.java-modal-content {
   background-color: #FFF9E6;
   border-width: 0.2rem;
   border-style: solid;
@@ -829,13 +841,13 @@ img.bg {
   grid-template-columns: 33% 33% 33%;
 }
 
-.javascript-modal-content h3 {
+.java-modal-content h3 {
   font-family: 'Srprojfont-Regular';
   font-weight: bold;
   font-size: 2rem;
 }
 
-.javascript-modal-content p {
+.java-modal-content p {
   font-family: 'SF Pro Display';
   font-size: 0.8rem;
   font-weight: bold;
@@ -860,6 +872,7 @@ img.bg {
 /* IDE CONTENT */
 
 .ide-modal-content {
+  font-family: 'SF Pro Display';
   background-color: #FFF9E6;
   border-width: 0.2rem;
   border-style: solid;
@@ -874,9 +887,13 @@ img.bg {
   padding: 20px; 
 }
 
+.ide-section-title {
+  margin-left: 1.7rem;
+}
+
 .ide {
   overflow-y: scroll;
-  height: 70%;
+  height: 40%;
 }
 
 .ide-description {
@@ -886,6 +903,10 @@ img.bg {
   color: #292B2E;
   margin-bottom: 2rem;
   margin-left: 1.7rem;
+  overflow-y: scroll;
+  height: 20%;
+  background-color: #f1f1f1;
+  padding: 1rem;
 }
 
 /* SCROLLBAR */
