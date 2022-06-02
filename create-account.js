@@ -65,14 +65,14 @@ function checkEmail(address) {
 
 // To check a password between 7 to 15 characters which contain at least one numeric digit and a special character
 function checkPassword(inPaswd) {
-    var paswd=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+    var pswLen = inPaswd.value.length;
     if (inPaswd.value.length == 0){
         inPaswd.style.outlineColor = "black";
         errorMsg("none", inPaswd);
         btnEnable(false);
         return false;
     }
-    else if(inPaswd.value.match(paswd)) { 
+    else if(pswLen> 6 && pswLen < 16) { 
         inPaswd.style.outlineColor = "#39FF13";
         errorMsg("none", inPaswd);
         return true;
