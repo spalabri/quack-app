@@ -299,3 +299,20 @@ function closeIdeModal() {
   ideModal.style.display = "none";
   javaModal.style.display = "block";
 }
+
+function completeCode() {
+  var completeModal = document.getElementById("completeModal");
+  var nextButton = document.getElementById("codeNextButton");
+  completeModal.style.display = "block";
+  cancelAnimationFrame(id);
+}
+
+function exitCompleteCode() {
+  canvas.style.transform = "translate(-50%, -50%)";
+  var span = document.getElementsByClassName("close")[0];
+  completeModal.style.display = "none";
+  ideModal.style.display = "none";
+  javaModal.style.display = "none";
+  codeModal.style.display = "none";
+  id = requestAnimationFrame(animate);
+}
