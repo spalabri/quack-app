@@ -7,7 +7,7 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open main.html",
+            "name": "Open create-account.html",
             "file": "/Users/shandeighpalabrica/Desktop/quack-app/main.html"
         }
     ]

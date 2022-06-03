@@ -14,7 +14,7 @@ let gameFrame = 0;
 const staggerFrames = 15;
 var id = null;
 // after 30s
-setInterval( function() { update("heart"); }, 30000 );
+setInterval( function() { update("heart"); }, 60000 );
 // after 60s 
 setInterval( function() { update("diet"); }, 60000 );
 // after 90s
@@ -112,6 +112,7 @@ function sleep() {
   var sleepModal = document.getElementById("sleepModal");
   var sleepButton = document.getElementById("sleepButton");
   sleepModal.style.display = "block";
+  heal("rest");
   cancelAnimationFrame(id);
 }
 
