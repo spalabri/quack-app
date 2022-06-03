@@ -225,11 +225,19 @@ function exitPurchaseModal() {
   buyModal.style.display = "none";
 }
 
-function updateMoney(){
+function decreaseMoney(){
   var confirmMsg = document.getElementById("item-name").innerHTML;
   var price = confirmMsg.substring(confirmMsg.length - 3);
   var total = document.getElementById("money").textContent;
   var diff = parseInt(total) - parseInt(price);
+  document.getElementById("money").textContent= diff;
+}
+
+function increaseMoney(){
+  var moneyMsg = document.getElementsByClassName("complete-money-increase")[0].innerHTML;
+  price = moneyMsg.substring(moneyMsg.indexOf("+")+1, moneyMsg.indexOf("+") +4 );
+  var total = document.getElementById("money").textContent;
+  var diff = parseInt(total) + parseInt(price);
   document.getElementById("money").textContent= diff;
 }
 
@@ -238,7 +246,7 @@ function feed() {
   buyModal.style.display = "none";
   shopModal.style.display = "none";
   cursorItem = assignCursor(cursorItem);
-  updateMoney();
+  decreaseMoney();
 }
 
 function assignCursor(item) {
@@ -305,6 +313,8 @@ function completeCode() {
   var nextButton = document.getElementById("codeNextButton");
   completeModal.style.display = "block";
   cancelAnimationFrame(id);
+  increaseMoney();
+  heal("heart");
 }
 
 function exitCompleteCode() {
