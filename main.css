@@ -757,6 +757,23 @@ img.bg {
 }
 
 /* CODE MODAL */
+.column1 {
+  float: left;
+  width: 45%;
+}
+
+.column2 {
+  float: right;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .code-modal-content {
   background-color: #FFF9E6;
   border-width: 0.2rem;
@@ -887,13 +904,13 @@ img.bg {
   padding: 20px; 
 }
 
-.ide-section-title {
-  margin-left: 1.7rem;
+.code-font {
+  font-family: monospace;
 }
 
-.ide {
-  overflow-y: scroll;
-  height: 40%;
+
+.ide-section-title {
+  margin-left: 1.7rem;
 }
 
 .ide-description {
@@ -904,9 +921,55 @@ img.bg {
   margin-bottom: 2rem;
   margin-left: 1.7rem;
   overflow-y: scroll;
-  height: 20%;
+  height: 350px;
   background-color: #f1f1f1;
   padding: 1rem;
+}
+
+.ide-environment {
+  overflow-y: scroll;
+  height: 400px;
+}
+
+#codeNextButton {
+  margin-left: 1rem;
+}
+
+#back-to-home {
+  margin-top: 1rem;
+  width: 40%;
+}
+
+.next-lesson {
+  font-family: 'SF Pro Display', sans-serif;
+  text-transform: uppercase;
+  color: #888; 
+  text-align: center;
+}
+
+.complete-modal-content {
+  font-family: 'SF Pro Display', sans-serif;
+  background-color: #FFF9E6;
+  margin: 20% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; 
+  border-radius: 1rem;  
+  text-align: center;
+}
+
+.complete-modal-content > img,
+    .complete-modal-content > .complete-heart-increase {
+        display: inline-block;
+    }
+
+.complete-modal-content > img,
+    .complete-modal-content > .complete-money-increase {
+        display: inline-block;
+    }
+
+.complete-modal-content img {
+  margin-bottom: -0.8rem;
 }
 
 /* SCROLLBAR */

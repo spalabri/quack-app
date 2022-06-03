@@ -79,9 +79,9 @@
                     <div class="img-container">
                         <img class="status-img" src="img/money.png" alt="heart health">
                     </div>
-                <div class="bar-container">
-                    <div id="money" class="bar">1250</div>
-                </div>
+                    <div class="bar-container">
+                        <div id="money" class="bar">1250</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,7 +139,7 @@
                                 </div>
                             </div>
                             <div class="grid-captions last-caption">
-                                <p>Be careful! If the meters get <b>too low</b>, your friend will run away. To. get them back, you'd need to complete extra coding challenges.</p>
+                                <p>Be careful! If the meters get <b>too low</b>, your friend will run away. To get them back, you'll need to complete extra coding challenges.</p>
                             </div>
                             <div class="grid-item back-button">
                                 <button class="tutoriallinks" onclick="changeModalContent(event, 'tutorial1')">back</button>
@@ -501,51 +501,60 @@
         <!-- IDE CONTENT -->
         <div id="ideModal" class="nav-modal">
             <div class="ide-modal-content">
+                <button type="button" id="codeNextButton" class="nav-close nav-button" onclick="completeCode()">next</button>
                 <button type="button" class="nav-close nav-button" onclick="closeIdeModal()">back</button>
                 <h1>Java Variables</h1>
-                <p class="ide-section-title"><b>ASSIGNMENT:</b></p>
-                <p class="ide-description"><b>Let's learn about the different types of Java variables and how to assign values!</b><br />
-                    <br />
-                    There are <b>5 different types of variables</b> in Java:<br />
-                    <br />
-                    String - stores text are surrounded by double quotes - "hello"<br />
-                    int - stores integers / whole numbers without decimals - 123 or -123<br />
-                    float - stores floating point numbers / numbers with decimals - 19.99 or -19.99<br />
-                    char - stores single characters and are surrounded by single quotes - ‘a’ or ‘B’<br />
-                    boolean - stores values with two states - true or false<br />
-                    <br />
-                    <b>When creating a variable, it should look like this:</b><br />
-                    [type] [variableName] = [value];<br />
-                    <br />
-                    <b>So to assign the phrase, “Hello World!” to myVariable it should look like this:</b><br />
-                    String myVariable = “Hello World!”;<br />
-                    <br />
-                    <b>And if we want myVariable to be the decimal “7.52”, it should look like this:</b><br />
-                    float myVariable = 7.52;<br />
-                    <br /><br />
-                    <b>Lesson Directions:</b><br /><br />
-                    Now let's try it!<br /><br />
-                    We’ve declared a variable named myName. Try assigning your full name to myName. After you’ve done that, declare 2 more variables named favoriteNumber and pineapplePizza. 
-                    Try assigning your favorite number to favoriteNumber and either True or False to pineapplePizza 
-                    (depending on whether you think pineapple belongs on pizza or not). Once you're done, scroll down and click the blue <b>"Execute"</b> button. 
-                </p>
-                <p class="ide-section-title"><b>CODING ENVIRONMENT:</b></p>
-                <div class="ide">
-                <!-- It will create a division for 
-                    compiler and embed that into 
-                    web page-->
-                <div data-pym-src=
-                "https://www.jdoodle.com/embed/v0/4Sxa">
+                <div class="row">
+                    <div class="column1">
+                        <p class="ide-section-title"><b>ASSIGNMENT:</b></p>
+                        <div class="ide-description"><b>Let's learn about the different types of Java variables and how to assign values!</b><br />
+                            <br />
+                            There are <b>5 different types of variables</b> in Java:<br />
+                            <br />
+                            <ul>
+                                <li>String - stores text are surrounded by double quotes - "hello"</li>
+                                <li>int - stores integers / whole numbers without decimals - 123 or -123</li>
+                                <li>float - stores floating point numbers / numbers with decimals - 19.99 or -19.99</li>
+                                <li>char - stores single characters and are surrounded by single quotes - ‘a’ or ‘B’</li>
+                                <li>boolean - stores values with two states - true or false</li>
+                            </ul>
+                            <br />
+                            <b>When creating a variable, it should look like this:</b><br />
+                            <p class="code-font">[type] [variableName] = [value];</p><br />
+                            <br />
+                            <b>So to assign the phrase, “Hello World!” to myVariable it should look like this:</b><br />
+                            <p class="code-font">String myVariable = “Hello World!”;</p><br />
+                            <br />
+                            <b>And if we want myVariable to be the decimal “7.52”, it should look like this:</b><br />
+                            <p class="code-font">float myVariable = 7.52;</p><br />
+                        </div>
                     </div>
-                
-                    <!-- This script tag contains the 
-                        javascript code in the written URL -->
-                    <script src=
-                "https://www.jdoodle.com/assets/jdoodle-pym.min.js"
-                        type="text/javascript">
-                    </script>
-                </div>
+                    <div class="column2">
+                        <p><b>CODE HERE:</b></p>
+                        <div class="ide-environment">
+                            <iframe src="https://codesandbox.io/embed/quackapp-qe08ll?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+                            style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+                            title="quackapp"
+                            allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+                            sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+                        ></iframe>
+                        </div>
+                    </div>
+                  </div>
             </div>           
+        </div>
+        <!-- CODE COMPLETION -->
+        <div id="completeModal" class="modal">
+            <div class="complete-modal-content">
+              <p class="modal-heading">Congratulations!</p>
+                <p class="modal-text">You have completed <b>Java: Introduction</b>.</p>
+                    <img class="complete-heart" src="img/heart.png">
+                    <p class="complete-heart-increase"><b>+</b>&nbsp;&nbsp;&nbsp;</p>
+                    <img class="complete-money" src="img/money.png">
+                    <p class="complete-money-increase"><b>+400</b></p>
+                <button type="button" id="back-to-home" class="close nav-button" onclick="exitCompleteCode()">back to home</button>
+                <p class="next-lesson">continue to next lesson</p>
+            </div>
         </div>
         <!-- SLEEP MODAL -->
         <div id="sleepModal" class="modal">
