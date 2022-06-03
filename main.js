@@ -154,6 +154,15 @@ function restartTutorial() {
   tutorialModal.style.display = "block";
 }
 
+function updateFriendName() {
+  cancelAnimationFrame(id);
+  canvas.style.transform = "translate(-50%, -50%)";
+  settingsModal.style.display = "none";
+  var tutorialModal = document.getElementById("nameModal");
+  changeModalContent(event, 'name1');
+  tutorialModal.style.display = "block";
+}
+
 function changeModalContent(evt, tutorialNumber) {
     var i, tutorialcontent, tutoriallinks;
 

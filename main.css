@@ -711,6 +711,86 @@ img.bg {
   border-radius: 0.5rem;
 }
 
+/* UPDATE NAME MODALS --------- */
+/* TUTORIAL 1 */
+.name-modal {
+  display: none; 
+  text-align: center;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.8); 
+}
+
+.name-modal-content {
+  background-color: #FFF9E6;
+  margin: 8% auto; 
+  border: 1px solid #888;
+  width: 50%; 
+  border-radius: 1rem;  
+  padding: 2% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-modal h1 {
+  text-align: center;
+  font-family: 'Srprojfont-Regular';
+  font-size: 4rem;
+  color: #292B2E;
+  display: block;
+}
+
+#mochiko {
+  width: 20%;
+}
+
+#confirm {
+  opacity: 0.4;
+}
+
+.name-modal button {
+  font-family: "srproj";
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #292B2E;
+    cursor: pointer;
+    border: none;
+    padding: 0.7rem 2.7rem 0.7rem 2.7rem;
+    text-align: center;
+    border-radius: 1rem;
+    display: block;
+}
+
+.name-modal input[type=text] {
+  width: 23rem;
+  padding: 0.65rem;
+  margin-top: 0.7rem;
+  background-color: #FBE7D5;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.name-modal a {
+  text-transform: uppercase;
+  font-family: 'SF Pro Display', sans-serif;
+  color: #545454;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.name-modal a:hover {
+  cursor: pointer;
+}
+
 /* SETTINGS MODAL */
 .settings-modal-content {
   background-color: #FFF9E6;
