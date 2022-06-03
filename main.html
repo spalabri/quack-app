@@ -556,6 +556,22 @@
                 <p class="next-lesson">continue to next lesson</p>
             </div>
         </div>
+        <!--UPDATE NAME MODAL-->
+        <div id="nameModal" class="name-modal">
+            <div class="name-modal-content">
+                <button type="button" class="nav-close nav-button" onclick="exitCode()">x</button>
+                <div class="name-div">
+                    <div id="name1" class="name-content">
+                        <h1>name your friend</h1>
+                        <img id="mochiko" src="img/mochiko.png"><br>
+                        <input oninput="checkName(this)" type="text" id="friendname" onKeyup="checkPetName()" name="friendname">
+                        <div id="friendnameError" class="emsg"></div>
+                        <button onclick="getFriendName()" type="submit" class="full" id="confirm" disabled="disabled" >confirm</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
         <!-- SLEEP MODAL -->
         <div id="sleepModal" class="modal">
             <div class="modal-content">
@@ -570,7 +586,7 @@
             <div class="settings-modal-content">
                 <button type="button" class="nav-close nav-button" onclick="exitSettings()">x</button>
                 <h1>settings</h1>
-                <button class="settings-buttons">update friend name</button>
+                <button class="settings-buttons" onclick="updateFriendName()">update friend name</button>
                 <br>
                 <button class="settings-buttons" onclick="restartTutorial()">restart tutorial</button>
                 <br>
